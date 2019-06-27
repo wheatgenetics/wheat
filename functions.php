@@ -120,6 +120,8 @@ add_action( 'widgets_init', 'wheat_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wheat_scripts() {
+	// Enqueue Google Fonts: Raleway and Libre Baskerville
+	wp_enqueue_style( 'wheat-fonts', 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Raleway:400,400i,600,600i&display=swap' );
 	wp_enqueue_style( 'wheat-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wheat-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
