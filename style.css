@@ -357,10 +357,37 @@ textarea {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.5; }
+  @media screen and (min-width: 700px) {
+    body,
+    button,
+    input,
+    select,
+    optgroup,
+    textarea {
+      font-size: 20px;
+      font-size: 1.25rem; } }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif; }
+
+h1 {
+  font-size: 3em; }
+
+h2 {
+  font-size: 2.6em; }
+
+h3 {
+  font-size: 2.2em; }
+
+h4 {
+  font-size: 2em; }
+
+h5 {
+  font-size: 1.8em; }
+
+h6 {
+  font-size: 1.6em; }
 
 p {
   margin-bottom: 1.5em; }
