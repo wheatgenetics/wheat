@@ -84,6 +84,42 @@ endif;
 add_action( 'after_setup_theme', 'wheat_setup' );
 
 /**
+ * Register custom fonts.
+ */
+function wheat_fonts_url() {
+        $fonts_url = '';
+
+        /*
+         * Translators: If there are characters in your language that are not
+         * supported by Libre Baskerville and Raleway, translate this to 'off'. Do not translate
+         * into your own language.
+         */
+        $libre_baskerville = _x( 'on', 'Libre Baskerville font: on or off', 'wheat' );
+	$raleway = _x( 'on', 'Raleway font: on or off', 'wheat' );
+
+	$font_families = array();
+
+        if ( 'off' !== $libre_baskerville ) {
+                $font_families[] = 'Libre Baskerville:400,400i,700';
+	}
+
+	if ( 'off' !== $raleway ) {
+                $font_families[] = 'Raleway:400,400i,600,600i';
+        }
+
+	if ( in_array( 'on', array($libre_baskerville, $raleway) ) ) {
+                $query_args = array(
+                        'family' => urlencode( implode( '|', $font_families ) ),
+                        'subset' => urlencode( 'latin,latin-ext' ),
+                );
+
+                $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+        }
+
+        return esc_url_raw( $fonts_url );
+}
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
@@ -121,7 +157,7 @@ add_action( 'widgets_init', 'wheat_widgets_init' );
  */
 function wheat_scripts() {
 	// Enqueue Google Fonts: Raleway and Libre Baskerville
-	wp_enqueue_style( 'wheat-fonts', 'https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Raleway:400,400i,600,600i&display=swap' );
+	wp_enqueue_style( 'wheat-fonts', wheat_fonts_url() );
 	wp_enqueue_style( 'wheat-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wheat-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
