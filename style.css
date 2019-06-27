@@ -354,8 +354,8 @@ optgroup,
 textarea {
   color: #404040;
   font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
