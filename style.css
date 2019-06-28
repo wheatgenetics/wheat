@@ -749,8 +749,7 @@ a {
   position: relative;
   padding: 1em;
   font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-  color: #fff;
-  background-color: #002254; }
+  color: #fff; }
   @media screen and (min-width: 600px) {
     .site-header {
       padding: 1em 2em; } }
