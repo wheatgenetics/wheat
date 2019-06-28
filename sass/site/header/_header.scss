@@ -10,6 +10,14 @@
 
 .site-branding {
 	min-height: 65px;
+
+	.custom-logo-link {
+		img {
+			display: block;
+			height: 65px;
+			width: auto;
+		}
+	}
 }
 
 .site-title {

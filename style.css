@@ -755,6 +755,10 @@ a {
 
 .site-branding {
   min-height: 65px; }
+  .site-branding .custom-logo-link img {
+    display: block;
+    height: 65px;
+    width: auto; }
 
 .site-title {
   margin: 0;
