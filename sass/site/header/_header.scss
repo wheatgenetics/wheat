@@ -1,8 +1,7 @@
 .site-header {
 	position: relative;
 	padding: 1em;
-	font-family: $font__sans;
-	color: #fff;
+	height: 650px;
 	
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
@@ -21,7 +20,7 @@
 	line-height: 1em;
 	
 	a {
-		color: white;
+		color: $color__text-main;
 		text-decoration: none;
 		
 		&:hover,
