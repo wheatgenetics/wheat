@@ -751,7 +751,7 @@ Header Menu
 .main-navigation {
   display: block;
   font-family: "Raleway", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   clear: left; }
   .main-navigation ul {
     display: none;
@@ -782,7 +782,8 @@ Header Menu
     width: 100%;
     padding: .5em 1em .5em 0;
     text-decoration: none;
-    color: #fff; }
+    text-transform: uppercase;
+    color: #404040; }
   .main-navigation a:hover,
   .main-navigation a:focus {
     text-decoration: underline; }
