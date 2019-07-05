@@ -799,7 +799,7 @@ button.dropdown-toggle {
   right: 0;
   border: none;
   background: inherit;
-  color: white;
+  color: #404040;
   line-height: 1.5em;
   padding: .4em 1em .4em .5em; }
 
@@ -812,8 +812,8 @@ button.dropdown-toggle {
   padding: .6em .8em;
   font-size: 80%;
   text-transform: uppercase;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3); }
+  color: #404040;
+  border: 1px solid #404040; }
 
 /* Toggle small menu and sub-menus on */
 .toggled-on ul,
