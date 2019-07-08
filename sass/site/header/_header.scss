@@ -5,10 +5,23 @@
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
 	}
+
+	#banner-text {
+		width: 100%;
+		padding-top: 75px;
+
+		p {
+			margin: 0 0 1em;
+		}
+	}
 }
 
 .home .site-header {
-	height: 650px;
+	height: 680px;
+	background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 .site-branding {
@@ -60,6 +73,9 @@
 @media screen and (min-width: $query__medium) {
 	.site-header {
 		display: flex;
+		align-items:flex-start;
+		align-content:flex-start;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
