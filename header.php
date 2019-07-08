@@ -60,6 +60,14 @@ if( !empty($backgroundImage) ) {
 			?>
 		</nav><!-- #site-navigation -->
 
+		<nav class="social-menu">
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'social'
+			) );
+			?>
+		</nav>
+
 		<div id="banner-text">
 			<?php the_field('banner_text'); ?>
 		</div>

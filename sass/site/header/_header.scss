@@ -1,9 +1,18 @@
 .site-header {
 	position: relative;
 	padding: 1em;
+
+	.social-menu {
+		display: none;
+	}
 	
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
+
+		.social-menu {
+			padding-top: 28px;
+			display: block;
+		}
 	}
 
 	#banner-text {
@@ -77,16 +86,22 @@
 		align-content:flex-start;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
+		.site-branding {
+			width: 20%;
+			flex: 1 0 auto;
+		}
+	
+		#site-navigation {
+			width: 60%;
+		}
+
+		.social-menu {
+			width: 20%;
+		}
 	}
 
-	.site-branding {
-		width: 25%;
-		flex: 1 0 auto;
-	}
-
-	#site-navigation {
-		width: 75%;
-	}
+	
 }
 
 /*
