@@ -12,6 +12,13 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
+body.home {
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
 hr {
 	background-color: $color__background-hr;
 	border: 0;
