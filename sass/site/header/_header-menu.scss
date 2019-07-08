@@ -1,9 +1,11 @@
 .main-navigation {
 	display: block;
-	
 	font-family: $font__sans;
-	font-weight: 600;
+	font-weight: 700;
+	font-size: .75em;
+	letter-spacing: $font__letter-spacing;
 	clear: left;
+	padding-top: 35px;
 	
 	ul {
 		display: none;
@@ -139,7 +141,7 @@ button.dropdown-toggle {
 			li {
 					
 				a {
-					padding: .4em 1em; 
+					padding: .4em 2.3em; 
 				}
 			}
 		}
@@ -151,7 +153,7 @@ button.dropdown-toggle {
 	.main-navigation {
 		
 		ul {
-			justify-content: flex-end;
+			// justify-content: flex-end;
 			padding-top: 0;
 		}
 		
