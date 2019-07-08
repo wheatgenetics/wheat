@@ -28,11 +28,11 @@ if( !empty($backgroundImage) ) {
 } 
 ?>
 
-<body <?php body_class(); ?> style="background-image:url(<?php if ($backgroundImageUrl) { echo $backgroundImageUrl; } ?>)">
+<body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wheat' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header" style="background-image:url(<?php if ($backgroundImageUrl) { echo $backgroundImageUrl; } ?>)">
 		<div class="site-branding">
 			<?php the_custom_logo(); ?>
 			<div class="site-branding__text">
@@ -59,6 +59,10 @@ if( !empty($backgroundImage) ) {
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
+		<div id="banner-text">
+			<?php the_field('banner_text'); ?>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
