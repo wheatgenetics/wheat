@@ -105,7 +105,7 @@ function wheat_fonts_url() {
 	}
 
 	if ( 'off' !== $raleway ) {
-                $font_families[] = 'Raleway:400,400i,600,600i';
+                $font_families[] = 'Raleway:400,400i,600,600i,700';
         }
 
 	if ( in_array( 'on', array($libre_baskerville, $raleway) ) ) {
