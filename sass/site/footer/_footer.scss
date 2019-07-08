@@ -7,19 +7,4 @@
 	@media screen and (min-width: $query__small) {
 		padding: 1em 2em;
     }
-    
-    .social-menu {
-        ul {
-            display: flex;
-            justify-content: flex-end;
-            list-style-type: none;
-        
-            a {
-                display: block;
-                padding: .5em .7em;
-                color: white;
-                text-decoration: none;
-            }
-        }
-    }
 }

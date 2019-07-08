@@ -18,3 +18,18 @@
 		width: 50%;
 	}
 }
+
+.social-menu {
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		list-style-type: none;
+	
+		a {
+			display: block;
+			padding: .5em .7em;
+			color: white;
+			text-decoration: none;
+		}
+	}
+}
