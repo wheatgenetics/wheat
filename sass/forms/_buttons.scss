@@ -17,3 +17,10 @@ input[type="submit"] {
 		color: $color__text-main;
 	}
 }
+
+.wp-block-button__link {
+	border-radius: 0;
+	font-size: .7em;
+	padding: .9em 2.3em;
+	letter-spacing: $font__menu-letter-spacing;
+}
