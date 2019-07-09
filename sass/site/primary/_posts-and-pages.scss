@@ -41,13 +41,20 @@
 }
 
 .home {
-	.entry-content {
-		max-width: 900px;
-		margin: 20px auto 0;
+	.site-content {
+		background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+		.entry-content {
+			height: 650px;
 
-		p {
-			font-size: 1.2em;
-			line-height: 2em;
+			p {
+				margin: 20px auto 40px;
+				max-width: 900px;
+				font-size: 1.2em;
+				line-height: 2em;
+			}
 		}
 	}
 }

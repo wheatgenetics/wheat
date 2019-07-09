@@ -22,10 +22,15 @@
 
 <?php 
 $backgroundImage = get_field('background_image');
+$backgroundInfographic = get_field('background_infographic');
 
 if( !empty($backgroundImage) ) {
 	$backgroundImageUrl = $backgroundImage['url'];
 } 
+
+if( !empty($backgroundInfographic) ) {
+	$backgroundInfographicUrl = $backgroundInfographic['url'];
+}                 
 ?>
 
 <body <?php body_class(); ?>>
@@ -73,4 +78,4 @@ if( !empty($backgroundImage) ) {
 		</div>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content" style="background-image:url(<?php if ($backgroundInfographicUrl) { echo $backgroundInfographicUrl; } ?>)">
