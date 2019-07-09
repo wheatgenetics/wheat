@@ -13,6 +13,25 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+        <div id="research-areas">
+            <?php 
+            $args = array(
+                'post_type'=> 'research_areas'
+            );              
+
+            $researchAreas = new WP_Query($args);
+
+            if ($researchAreas->have_posts()) {
+                while ($researchAreas->have_posts()) {
+                    $researchAreas->the_post();
+                    echo '<div class="research-box">';
+                    echo '<p><i style="font-size: 3em;" class="fas fa-dna"></i></p>';
+                    the_title();
+                    echo '</div>';
+                }
+            }
+            ?>
+        </div>
 		<?php
 		while ( have_posts() ) :
 			the_post();
