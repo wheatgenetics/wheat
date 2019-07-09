@@ -10,6 +10,8 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	max-width: $size__site-main;
+	margin: 0 auto;
 }
 
 hr {
