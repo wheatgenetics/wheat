@@ -142,7 +142,7 @@ button.dropdown-toggle {
 			li {
 					
 				a {
-					padding: .4em 2.3em; 
+					padding: .4em .3em; 
 				}
 			}
 		}
@@ -152,11 +152,15 @@ button.dropdown-toggle {
 
 @media screen and (min-width: $query__medium) {
 	.main-navigation {
-		
 		ul {
 			// justify-content: flex-end;
 			padding-top: 0;
+
+			li {	
+				a {
+					padding: .4em 2.3em; 
+				}
+			}
 		}
-		
 	}
 }
