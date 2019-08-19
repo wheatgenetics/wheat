@@ -181,6 +181,7 @@ function wheat_scripts() {
 	// Enqueue Google Fonts: Raleway and Libre Baskerville
 	wp_enqueue_style( 'wheat-fonts', wheat_fonts_url() );
 	wp_enqueue_style( 'wheat-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'mobile-menu', get_template_directory_uri() . '/mobile-menu.css' );
 
 	wp_enqueue_script( 'wheat-navigation', get_template_directory_uri('jquery') . '/js/navigation.js', array(), '20151215', true );
 	wp_localize_script( 'wheat-navigation', 'wheatScreenReaderText', array(
