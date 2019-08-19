@@ -22,15 +22,10 @@
 
 <?php 
 $backgroundImage = get_field('background_image');
-$backgroundInfographic = get_field('background_infographic');
 
 if( !empty($backgroundImage) ) {
 	$backgroundImageUrl = $backgroundImage['url'];
-} 
-
-if( !empty($backgroundInfographic) ) {
-	$backgroundInfographicUrl = $backgroundInfographic['url'];
-}                 
+}             
 ?>
 
 <body <?php body_class(); ?>>
@@ -90,28 +85,6 @@ if( !empty($backgroundInfographic) ) {
 		<div id="banner-text">
 			<?php the_field('banner_text'); ?>
 		</div>
-
-		<?php if (is_front_page()) { ?>
-			<div id="research-areas">
-				<?php 
-				$args = array(
-					'post_type'=> 'research_areas'
-				);              
-
-				$researchAreas = new WP_Query($args);
-
-				if ($researchAreas->have_posts()) {
-					while ($researchAreas->have_posts()) {
-						$researchAreas->the_post();
-						echo '<div class="research-box">';
-						echo '<p><i style="font-size: 3em;" class="fas fa-dna"></i></p>';
-						the_title();
-						echo '</div>';
-					}
-				}
-				?>
-			</div>
-		<?php } ?>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content" style="background-image:url(<?php if ($backgroundInfographicUrl) { echo $backgroundInfographicUrl; } ?>)">
+	<div id="content" class="site-content">
