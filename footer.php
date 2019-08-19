@@ -28,7 +28,7 @@
 			<h3>NEWS</h3>
 			<div id="news-container">
 				<div class="news-item"
-					style="background:linear-gradient(transparent, #020202), url(./img/wheat_code.jpg) no-repeat center top;background-size: cover;">
+					style="background:linear-gradient(transparent, #020202), url(<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/wheat_code.jpg) no-repeat center top;background-size: cover;">
 					<div class="news-item-content-holder">
 						<p>Wheat Code Finally Cracked</p>
 						<hr class="dotted">
@@ -37,7 +37,7 @@
 				</div>
 
 				<div class="news-item"
-					style="background:linear-gradient(transparent, #020202), url(./img/usaid_extends.jpg) no-repeat center top;background-size: cover;">
+					style="background:linear-gradient(transparent, #020202), url(<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/usaid_extends.jpg) no-repeat center top;background-size: cover;">
 					<div class="news-item-content-holder">
 						<p>USAID Extends Innovation and Research Partnerships</p>
 						<hr class="dotted">
@@ -46,7 +46,7 @@
 				</div>
 
 				<div class="news-item"
-					style="background:linear-gradient(transparent, #020202), url(./img/new_genomic_tool.jpg) no-repeat center top;background-size: cover;">
+					style="background:linear-gradient(transparent, #020202), url(<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/new_genomic_tool.jpg) no-repeat center top;background-size: cover;">
 					<div class="news-item-content-holder">
 						<p>New Genomic Tool Searches Wheat's Wild Past</p>
 						<hr class="dotted">
@@ -66,7 +66,7 @@
 			<div id="recent-publications-container">
 				<div class="recent-publication">
 					<div class="recent-publication-header">
-						<img class="pubicon" src="./img/PubIcon.png" />
+						<img class="pubicon" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/PubIcon.png" />
 						<span class="button date purple-background">June 6, 2019</span>
 					</div>
 
@@ -80,7 +80,7 @@
 
 				<div class="recent-publication">
 					<div class="recent-publication-header">
-						<img class="pubicon" src="./img/PubIcon.png" />
+						<img class="pubicon" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/PubIcon.png" />
 						<span class="button date purple-background">May 28, 2019</span>
 					</div>
 
@@ -92,7 +92,7 @@
 
 				<div class="recent-publication">
 					<div class="recent-publication-header">
-						<img class="pubicon" src="./img/PubIcon.png" />
+						<img class="pubicon" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/PubIcon.png" />
 						<span class="button date purple-background">May 14, 2019</span>
 					</div>
 
@@ -114,19 +114,19 @@
 	<div id="sponsors">
 		<p>SPONSORS</p>
 		<div id="sponsors-img-container">
-			<img src="./img/KansasWheat.png" />
-			<img src="./img/NSF.png" />
-			<img src="./img/IWYP.png" />
-			<img src="./img/FeedtheFuture.png" />
-			<img src="./img/BeachelBorlaug.png" />
-			<img src="./img/NIFA.png" />
-			<img src="./img/GatesFoundation.png" />
+			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasWheat.png" />
+			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/NSF.png" />
+			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/IWYP.png" />
+			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/FeedtheFuture.png" />
+			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/BeachelBorlaug.png" />
+			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/NIFA.png" />
+			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/GatesFoundation.png" />
 		</div>
 	</div>
-
+			
 	<footer id="colophon" class="site-footer">
 		<div id="kstate-logo-holder">
-            <img id="kstate-logo" src="./img/KansasStateUniversity.png" />
+            <img id="kstate-logo" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasStateUniversity.png" />
 		</div>
 		
 		<nav class="social-menu">

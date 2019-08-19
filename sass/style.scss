@@ -972,27 +972,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   /*--------------------------------------------------------------
 	## Header
 	--------------------------------------------------------------*/
-  header {
-	position: relative;
-	padding: 0 10px 1em;
-	/* z-index: -1; */
-	background-position: center top;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	height: 400px;
-  }
-  
-  @media screen and (min-width: 900px) {
-	.home header {
-	  height: 680px;
-	}
-  }
   
   header .site-branding {
-	display: flex;
-	min-height: 85px;
-	padding-top: 1em;
+	
   }
   
   header .site-branding .custom-logo-link {

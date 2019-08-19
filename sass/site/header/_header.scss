@@ -1,11 +1,17 @@
 .site-header {
 	position: relative;
-	padding: 1em;
-	// z-index: -1;
+	padding: 0 10px 1em;
+	/* z-index: -1; */
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	height: 400px;
 
 	.site-branding {
 		display: flex;
 		min-height: 85px;
+		padding-top: 1em;
 	
 		.custom-logo-link {
 			margin-right: 1em;
@@ -119,6 +125,12 @@
 		}
 	}
 }
+
+@media screen and (min-width: 900px) {
+	.home .site-header {
+	  height: 680px;
+	}
+  }
 
 
 
