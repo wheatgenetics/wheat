@@ -34,6 +34,21 @@ if( !empty($backgroundInfographic) ) {
 ?>
 
 <body <?php body_class(); ?>>
+
+<input type="checkbox" id="menuToggler" class="input-toggler" />
+<label for="menuToggler" class="menu-toggler"> <span class="menu-toggler__line"></span> <span
+		class="menu-toggler__line"></span> <span class="menu-toggler__line"></span> </label>
+<aside class="sidebar">
+	<ul class="menu">
+		<li class="menu__item"><a class="menu__link current" href=".">Home</a></li>
+		<li class="menu__item"><a class="menu__link" href="./people/">People</a></li>
+		<li class="menu__item"><a class="menu__link" href="./projects/">Projects</a></li>
+		<li class="menu__item"><a class="menu__link" href="./publications/">Publications</a></li>
+		<li class="menu__item"><a class="menu__link" href="./news/">News</a></li>
+		<li class="menu__item"><a class="menu__link" href="./resources/">Resources</a></li>
+	</ul>
+</aside>
+	
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wheat' ); ?></a>
 
