@@ -31,7 +31,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Menus
 # Accessibility
 # Alignments
-# Clearings
 # Widgets
 # Content
 	## Posts and pages
@@ -523,23 +522,13 @@ html {
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
-  /* max-width: 1500px;
-  margin: 0 auto; */
+  /* max-width: 1500px; */
+  /* margin: 0 auto; */
 }
 
 .container {
   max-width: 1500px;
   margin: 0 auto;
-}
-
-@media screen and (min-width: 900px) {
-  .site-header .container {
-      display: flex;
-      align-items: flex-start;
-      align-content: flex-start;
-      flex-wrap: wrap;
-      justify-content: space-between;
-  }
 }
 
 hr {
@@ -742,10 +731,6 @@ a:active {
 /*--------------------------------------------------------------
     ## Menus
     --------------------------------------------------------------*/
-footer .social-menu {
-  width: 50%;
-}
-
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -778,12 +763,6 @@ footer .social-menu {
   display: block;
   padding: .5em .7em;
   color: white;
-  text-decoration: none;
-}
-
-footer .social-menu ul a {
-  padding: 0 .7em;
-  line-height: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -853,32 +832,6 @@ footer .social-menu ul a {
 }
 
 /*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-  content: "";
-  display: table;
-  table-layout: fixed;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-content:after,
-.site-footer:after {
-  clear: both;
-}
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -890,7 +843,7 @@ footer .social-menu ul a {
 
 @media screen and (min-width: 600px) {
   .site-content {
-    padding: 2em;
+    /* padding: 2em; */
   }
 }
 
@@ -906,13 +859,19 @@ footer .social-menu ul a {
 --------------------------------------------------------------*/
 .site-header {
   position: relative;
-  /* padding: 0 10px 1em; */
+  padding: 0 10px 1em;
   /* z-index: -1; */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  /* height: 400px; */
+  height: 400px;
+}
+
+@media screen and (min-width: 900px) {
+  .home .site-header {
+    height: 680px;
+  }
 }
 
 .site-header .site-branding {
@@ -948,12 +907,6 @@ footer .social-menu ul a {
 
 .site-header .site-branding .site-branding__text .site-title a {
   color: #404040;
-  text-decoration: none;
-}
-
-.site-header .site-branding .site-branding__text .site-title a:hover,
-.site-header .site-branding .site-branding__text .site-title a:focus {
-  text-decoration: underline;
 }
 
 .site-header .site-branding .site-branding__text .site-description {
@@ -977,19 +930,23 @@ footer .social-menu ul a {
   margin: 0 0 1em;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
+  .site-header #banner-text {
+    padding-top: 75px;
+    font-size: 100%;
+  }
+
   .site-header {
     padding: 0 2em 1em;
   }
 
   .site-header .social-menu {
-    padding-top: 28px;
+    padding-top: 2.7em;
     display: block;
+    width: 20%;
   }
-}
 
-@media screen and (min-width: 900px) {
-  .site-header {
+  .site-header .container {
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
@@ -1002,52 +959,8 @@ footer .social-menu ul a {
     flex: 1 0 auto;
   }
 
-  .site-header #site-navigation {
+  .site-header .main-navigation {
     width: 60%;
-  }
-
-  .site-header .social-menu {
-    width: 20%;
-    padding-top: 2.7em;
-    display: block;
-  }
-
-  header #banner-text {
-    padding-top: 75px;
-    font-size: 100%;
-  }
-}
-
-.home .site-header {
-  height: 680px;
-  /* background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll; */
-}
-
-.home .site-header #research-areas {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-top: 305px;
-}
-
-.home .site-header #research-areas .research-box {
-  height: 130px;
-  background-color: #472979;
-  width: 195px;
-  color: white;
-  text-align: center;
-  margin: 0 2px;
-  padding: 12px 30px;
-  text-transform: uppercase;
-  font-size: .75em;
-}
-
-@media screen and (min-width: 900px) {
-  .home .site-header {
-    height: 680px;
   }
 }
 
@@ -1123,7 +1036,7 @@ Header Menu
   padding-right: 2em;
 }
 
-button.dropdown-toggle {
+/* button.dropdown-toggle {
   position: absolute;
   right: 0;
   border: none;
@@ -1131,9 +1044,9 @@ button.dropdown-toggle {
   color: #404040;
   line-height: 1.5em;
   padding: .4em 1em .4em .5em;
-}
+} */
 
-.menu-toggle {
+/* .menu-toggle {
   position: absolute;
   top: 0;
   right: 0;
@@ -1144,18 +1057,15 @@ button.dropdown-toggle {
   text-transform: uppercase;
   color: #404040;
   border: 1px solid #404040;
-}
+} */
 
 /* Toggle small menu and sub-menus on */
-.toggled-on ul,
+/* .toggled-on ul,
 .sub-menu.toggled-on {
   display: block;
-}
+} */
 
-@media screen and (min-width: 600px) {
-  .menu-toggle {
-    display: none;
-  }
+@media screen and (min-width: 900px) {
 
   .main-navigation .menu-item-has-children>a,
   .main-navigation .page_item_has_children>a {
@@ -1167,11 +1077,12 @@ button.dropdown-toggle {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 0;
   }
 
   .main-navigation ul ul {
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
     margin-left: 0;
   }
 
@@ -1185,29 +1096,12 @@ button.dropdown-toggle {
   }
 
   .main-navigation ul li a {
-    padding: .4em .3em;
+    padding: 4.7em 1.2em 1em;
   }
 
   .main-navigation ul li a.current {
     color: white;
     background-color: #472979;
-}
-
-@media screen and (min-width: 900px) {
-  header .main-navigation {
-    width: 60%;
-  }
-
-  .main-navigation ul {
-    padding-top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 0;
-  }
-
-  .main-navigation ul li a {
-    padding: 4.7em 1.2em 1em;
   }
 }
 
@@ -1259,12 +1153,11 @@ button.dropdown-toggle {
   margin: 0 0 1.5em;
 }
 
-.home .site-content {
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
+/* @media screen and (min-width: 1050px) {
+  .home .site-content {
+    background-position: center top;
+  }
+} */
 
 .home .site-content .entry-content {
   /* height: 650px; */
@@ -1272,8 +1165,8 @@ button.dropdown-toggle {
 }
 
 .home .site-content .entry-content p {
-  /* margin: 0 auto 1.5em; */
-    max-width: 900px;
+  /* margin: 70px auto 40px;
+    max-width: 900px; */
   font-size: 1.2em;
   line-height: 2em;
 }
@@ -1300,26 +1193,45 @@ button.dropdown-toggle {
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
-  display: flex;
-  justify-content: space-between;
   position: relative;
   padding: 1em;
   color: white;
   background-color: #333;
 }
 
+footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3.5em;
+  /* justify-content: space-between; */
+}
+
 @media screen and (min-width: 600px) {
-  .site-footer {
+  .site-footer .container {
     padding: 2em 2em 3em;
   }
 }
 
 #kstate-logo-holder {
-  width: 50%;
+  /* width: 50%; */
 }
 
 #kstate-logo {
   width: 14em;
+}
+
+footer .social-menu {
+  /* width: 50%; */
+}
+
+footer .social-menu ul a {
+  padding: 0 .7em;
+  line-height: 1em;
+}
+
+footer #contact {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 /*--------------------------------------------------------------
@@ -1454,6 +1366,7 @@ object {
         justify-content: center;
         display: flex;
         flex-wrap: wrap;
+
         /* padding: 0 1.4em; */
       }
       
@@ -1505,19 +1418,19 @@ object {
         }
       }
       
-      #recent-publications,
-      #news {
+      .home #recent-publications,
+      .home #news {
         max-width: 975px;
         margin: 0 auto;
       }
       
-      #recent-publications h3,
-      #news h3 {
+      .home #recent-publications h3,
+      .home #news h3 {
         margin: 0 0 10px 10px;
       }
       
-      #recent-publications,
-      #news {
+      .home #recent-publications,
+      .home #news {
         padding-bottom: 3.5em;
       }
       
@@ -1542,7 +1455,7 @@ object {
         padding: .35em .8em;
       }
       
-      #news {
+      .home #news {
         position: relative;
         /* padding-top: 33%; */
         margin-top: -13%;
@@ -1561,6 +1474,7 @@ object {
         
           }
         } */
+
       /* @media screen and (min-width: 900px) {
           #news {
             padding-top: 15%;
@@ -1584,6 +1498,7 @@ object {
             padding-top: 35%;
           }
         } */
+
       #news-container,
       #recent-publications-container {
         display: inline-block;
@@ -1600,6 +1515,9 @@ object {
         text-transform: uppercase;
         display: flex;
         padding: 24% 30px 20px;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
       }
       
       @media screen and (min-width: 600px) {
@@ -1661,7 +1579,7 @@ object {
       }
       
       @media screen and (min-width: 600px) {
-        #sponsors {
+        #sponsors .container {
           padding-left: 34px;
           padding-right: 34px;
         }
@@ -1688,3 +1606,51 @@ object {
           margin: 0 34px 2.6em 0;
         }
       }
+
+/*--------------------------------------------------------------
+    ## People, News
+    --------------------------------------------------------------*/
+    #people article,
+    #news article {
+      clear: both;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom: .1em dotted #dbd9d1;
+    }
+    
+    #people article img,
+    #news article img,
+    #people .fas {
+      width: 100%;
+    }
+    
+    @media screen and (min-width: 600px) {
+    
+      #people article,
+      #news article {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-column-gap: 30px;
+      }
+    }
+    
+    #people article:last-of-type,
+    #people article:last-of-type {
+      border: none;
+    }
+    
+    #people .fas {
+      color: lightgray;
+    }
+    
+    #people p,
+    #news p {
+      margin: 0;
+    }
+    
+    /*--------------------------------------------------------------
+      ## Vue.js
+      --------------------------------------------------------------*/
+    [v-cloak] {
+      display: none !important;
+    }
