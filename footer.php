@@ -125,17 +125,19 @@
 	</div>
 			
 	<footer id="colophon" class="site-footer">
-		<div id="kstate-logo-holder">
-            <img id="kstate-logo" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasStateUniversity.png" />
+		<div class="container">
+			<div id="kstate-logo-holder">
+				<img id="kstate-logo" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasStateUniversity.png" />
+			</div>
+			
+			<nav class="social-menu">
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'social'
+				) );
+				?>
+			</nav>
 		</div>
-		
-		<nav class="social-menu">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'social'
-			) );
-			?>
-		</nav>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
