@@ -20,10 +20,10 @@ get_header();
 		if ($researchAreas->have_posts()) {
 			while ($researchAreas->have_posts()) {
 				$researchAreas->the_post();
-				echo '<div class="research-box">';
+				echo '<a class="research-box">';
 				echo '<p><i style="font-size: 3em;" class="fas fa-dna"></i></p>';
 				the_title();
-				echo '</div>';
+				echo '</a>';
 			}
 		}
 		?>
