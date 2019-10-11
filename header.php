@@ -48,42 +48,44 @@ if( !empty($backgroundImage) ) {
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wheat' ); ?></a>
 
 	<header id="masthead" class="site-header" style="background-image:url(<?php if ($backgroundImageUrl) { echo $backgroundImageUrl; } ?>)">
-		<div class="site-branding">
-			<?php the_custom_logo(); ?>
-			<div class="site-branding__text">
-				<?php if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+		<div class="container">
+			<div class="site-branding">
+				<?php the_custom_logo(); ?>
+				<div class="site-branding__text">
+					<?php if ( is_front_page() && is_home() ) : ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php else : ?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+					endif;
+					$wheat_description = get_bloginfo( 'description', 'display' );
+					if ( $wheat_description || is_customize_preview() ) :
+					?>
+						<p class="site-description"><?php echo $wheat_description; /* WPCS: xss ok. */ ?></p>
+					<?php endif; ?>
+				</div><!-- .site-branding__text -->
+			</div><!-- .site-branding -->
+
+			<nav id="site-navigation" class="main-navigation">
 				<?php
-				endif;
-				$wheat_description = get_bloginfo( 'description', 'display' );
-				if ( $wheat_description || is_customize_preview() ) :
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
 				?>
-					<p class="site-description"><?php echo $wheat_description; /* WPCS: xss ok. */ ?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding__text -->
-		</div><!-- .site-branding -->
+			</nav><!-- #site-navigation -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+			<nav class="social-menu">
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'social'
+				) );
+				?>
+			</nav>
 
-		<nav class="social-menu">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'social'
-			) );
-			?>
-		</nav>
-
-		<div id="banner-text">
-			<?php the_field('banner_text'); ?>
+			<div id="banner-text">
+				<?php the_field('banner_text'); ?>
+			</div>
 		</div>
 	</header><!-- #masthead -->
 
