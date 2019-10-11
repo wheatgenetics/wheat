@@ -959,10 +959,10 @@ a:active {
 
 .home .site-header {
   height: 680px;
-  background-position: center top;
+  /* background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: scroll; */
 }
 
 .home .site-header #research-areas {
