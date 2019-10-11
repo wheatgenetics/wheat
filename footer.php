@@ -112,15 +112,17 @@
 	<?php } ?>
 
 	<div id="sponsors">
-		<p>SPONSORS</p>
-		<div id="sponsors-img-container">
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasWheat.png" />
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/NSF.png" />
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/IWYP.png" />
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/FeedtheFuture.png" />
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/BeachelBorlaug.png" />
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/NIFA.png" />
-			<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/GatesFoundation.png" />
+		<div class="container">
+			<p>SPONSORS</p>
+			<div id="sponsors-img-container">
+				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasWheat.png" />
+				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/NSF.png" />
+				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/IWYP.png" />
+				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/FeedtheFuture.png" />
+				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/BeachelBorlaug.png" />
+				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/NIFA.png" />
+				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/GatesFoundation.png" />
+			</div>
 		</div>
 	</div>
 			
