@@ -115,13 +115,23 @@
 		<div class="container">
 			<p>SPONSORS</p>
 			<div id="sponsors-img-container">
-				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasWheat.png" />
-				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/NSF.png" />
-				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/IWYP.png" />
-				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/FeedtheFuture.png" />
-				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/BeachelBorlaug.png" />
-				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/NIFA.png" />
-				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/GatesFoundation.png" />
+				<?php
+				$query = new WP_Query(array(
+					'post_type' => 'sponsors',
+					'post_status' => 'publish',
+					'posts_per_page' => -1
+				));
+
+
+				while ($query->have_posts()) {
+					$query->the_post();
+					$post_id = get_the_ID();
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+					echo "<img src='" . $image[0] . "'/>";
+				}
+
+				wp_reset_query();
+				?>
 			</div>
 		</div>
 	</div>
