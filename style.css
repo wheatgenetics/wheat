@@ -1407,14 +1407,14 @@ object {
       }
       
       #infographic {
-        margin-top: -30px;
+        margin-top: -51px;
         position: relative;
         z-index: -1;
       }
       
       @media screen and (min-width: 600px) {
         #infographic {
-          margin-top: -80px;
+          margin-top: -104px;
         }
       }
       
