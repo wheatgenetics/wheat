@@ -122,7 +122,6 @@
 					'posts_per_page' => -1
 				));
 
-
 				while ($query->have_posts()) {
 					$query->the_post();
 					$post_id = get_the_ID();
