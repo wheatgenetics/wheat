@@ -7,7 +7,7 @@
  * @package Wheat
  */
 
-get_header();
+get_header('front');
 ?>
 	<div id="research-areas">
 		<?php 
@@ -50,4 +50,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+get_footer('front');
