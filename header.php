@@ -23,7 +23,7 @@
 <?php 
 $backgroundImage = get_field('background_image');
 
-if( !empty($backgroundImage) ) {
+if (!empty($backgroundImage)) {
 	$backgroundImageUrl = $backgroundImage['url'];
 }             
 ?>
@@ -47,7 +47,7 @@ if( !empty($backgroundImage) ) {
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wheat' ); ?></a>
 
-	<header id="masthead" class="site-header" style="background-image:url(<?php if ($backgroundImageUrl) { echo $backgroundImageUrl; } ?>)">
+	<header id="masthead" class="site-header" style="background-image:url(<?php if (!empty($backgroundImageUrl)) { echo $backgroundImageUrl; } ?>)">
 		<div class="container">
 			<div class="site-branding">
 				<?php the_custom_logo(); ?>
