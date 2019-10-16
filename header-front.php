@@ -21,11 +21,11 @@
 </head>
 
 <?php 
-$backgroundImage = get_field('background_image');
-
+$object = get_queried_object();
+$backgroundImage = get_field('background_image', $object->name);
 if (!empty($backgroundImage)) {
 	$backgroundImageUrl = $backgroundImage['url'];
-}             
+}            
 ?>
 
 <body <?php body_class(); ?>>
