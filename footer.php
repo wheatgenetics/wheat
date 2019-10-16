@@ -26,37 +26,36 @@
 
 		<div id="news">
 			<h3>NEWS</h3>
+			
 			<div id="news-container">
-				<div class="news-item"
-					style="background:linear-gradient(transparent, #020202), url(<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/wheat_code.jpg) no-repeat center top;background-size: cover;">
-					<div class="news-item-content-holder">
-						<p>Wheat Code Finally Cracked</p>
-						<hr class="dotted">
-						<p><a class="button purple-background">Read More</a></p>
-					</div>
-				</div>
+				<?php
+				$query = new WP_Query(array(
+					'post_type' => 'news',
+					'post_status' => 'publish',
+					'posts_per_page' => 3
+				));
 
-				<div class="news-item"
-					style="background:linear-gradient(transparent, #020202), url(<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/usaid_extends.jpg) no-repeat center top;background-size: cover;">
-					<div class="news-item-content-holder">
-						<p>USAID Extends Innovation and Research Partnerships</p>
-						<hr class="dotted">
-						<p><a class="button purple-background">Read More</a></p>
-					</div>
-				</div>
+				while ($query->have_posts()) {
+					$query->the_post();
+					$post_id = get_the_ID();
+					$title = get_the_title();
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
 
-				<div class="news-item"
-					style="background:linear-gradient(transparent, #020202), url(<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/new_genomic_tool.jpg) no-repeat center top;background-size: cover;">
-					<div class="news-item-content-holder">
-						<p>New Genomic Tool Searches Wheat's Wild Past</p>
-						<hr class="dotted">
-						<p><a class="button purple-background">Read More</a></p>
-					</div>
-				</div>
+					echo "<div class='news-item' style='background:linear-gradient(transparent, #020202), url(" . $image[0] . ") no-repeat center top;background-size: cover;'>";
+					echo "<div class='news-item-content-holder'>";
+					echo "<p>" . $title . "</p>";
+					echo "<hr class='dotted'>";
+					echo "<p><a class='button purple-background'>Read More</a></p>";
+					echo "</div>";
+					echo "</div>";
+				}
+
+				wp_reset_query();
+				?>
 			</div>
 
 			<div class="view-all-link-container">
-				<a class="button" href="#">All news</a>
+				<a class="button" href="<?php echo esc_url( home_url( '/news' ) ); ?>">All news</a>
 			</div>
 		</div>
 
@@ -64,49 +63,48 @@
 			<h3>RECENT PUBLICATIONS</h3>
 
 			<div id="recent-publications-container">
-				<div class="recent-publication">
-					<div class="recent-publication-header">
-						<img class="pubicon" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/PubIcon.png" />
-						<span class="button date purple-background">June 6, 2019</span>
-					</div>
+				<?php
+				$query = new WP_Query(array(
+					'post_type' => 'publications',
+					'post_status' => 'publish',
+					'posts_per_page' => 3
+				));
 
-					<p>Genome mapping of quantitative trait loci (QTL) controlling domestication traits of
-						intermediate
-						wheatgrass (Thinopyrum intermedium)</p>
-					<div class="journal">
-						Theoretical and Applied Genetics
-					</div>
-				</div>
+				while ($query->have_posts()) {
+					$query->the_post();
+					$post_id = get_the_ID();
+					$title = get_the_title();
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+					
+					if (get_field('publication_date', $post_id)) {
+						$publication_date = get_field('publication_date', $post_id);
+					} else {
+						$publication_date = '';
+					}
 
-				<div class="recent-publication">
-					<div class="recent-publication-header">
-						<img class="pubicon" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/PubIcon.png" />
-						<span class="button date purple-background">May 28, 2019</span>
-					</div>
+					if (get_field('journal', $post_id)) {
+						$journal = get_field('journal', $post_id);
+					} else {
+						$journal = '';
+					}
+					echo "<div class='recent-publication'>";
+					echo "<div class='recent-publication-header'>";
+					echo "<img class='pubicon' src='" . esc_url( home_url( '/' ) ) . "wp-content/themes/wheat/images/PubIcon.png' />";
+					echo "<span class='button date purple-background'>" . $publication_date . "</span>";
+					echo "</div>";
+					echo "<p>" . $title . "</p>";
+					echo "<div class='journal'>";
+					echo $journal;
+					echo "</div>";
+					echo "</div>";
+				}
 
-					<p>Reduced response diversity does not negatively impact wheat climate resilience</p>
-					<div class="journal">
-						Proceedings of the National Academy of Sciences
-					</div>
-				</div>
-
-				<div class="recent-publication">
-					<div class="recent-publication-header">
-						<img class="pubicon" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/PubIcon.png" />
-						<span class="button date purple-background">May 14, 2019</span>
-					</div>
-
-					<p>Small plot identification from video streams for high-throughput phenotyping of large
-						breeding
-						populations with unmanned aerial systems</p>
-					<div class="journal">
-						International Society for Optics and Photonics
-					</div>
-				</div>
+				wp_reset_query();
+				?>
 			</div>
 
 			<div class="view-all-link-container">
-				<a class="button" href="#">All publications</a>
+				<a class="button" href="<?php echo esc_url( home_url( '/publications' ) ); ?>">All publications</a>
 			</div>
 		</div>
 	<?php } ?>
