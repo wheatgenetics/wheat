@@ -9,6 +9,7 @@
 
 get_header();
 ?>
+
 	<div class="container">
 		<div id="page-title">
 			<?php post_type_archive_title(); ?>
