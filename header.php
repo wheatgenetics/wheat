@@ -31,8 +31,12 @@ if (!empty($backgroundImage)) {
 <body <?php body_class(); ?>>
 
 <input type="checkbox" id="menuToggler" class="input-toggler" />
-<label for="menuToggler" class="menu-toggler"> <span class="menu-toggler__line"></span> <span
-		class="menu-toggler__line"></span> <span class="menu-toggler__line"></span> </label>
+<label for="menuToggler" class="menu-toggler">
+	<span class="menu-toggler__line"></span>
+	<span class="menu-toggler__line"></span>
+	<span class="menu-toggler__line"></span>
+</label>
+
 <aside class="sidebar">
 	<ul class="menu">
 		<li class="menu__item"><a class="menu__link current" href=".">Home</a></li>
