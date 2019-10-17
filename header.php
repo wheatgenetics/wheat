@@ -22,6 +22,8 @@
 
 <?php
 $object = get_queried_object();
+// var_dump( $object );
+
 $backgroundImage = get_field('background_image', $object->name);
 if (!empty($backgroundImage)) {
 	$backgroundImageUrl = $backgroundImage['url'];
