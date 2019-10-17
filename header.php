@@ -78,10 +78,6 @@
 				) );
 				?>
 			</nav>
-
-			<div id="banner-text">
-				<?php the_field('banner_text'); ?>
-			</div>
 		</div>
 	</header><!-- #masthead -->
 
