@@ -11,12 +11,14 @@ get_header();
 ?>
 
 	<div class="container">
-		<div id="page-title">
-			<?php post_type_archive_title(); ?>
-		</div>
+		<?php get_sidebar(); ?>
+		
 		
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
+			<h3 id="page-title">
+			<?php post_type_archive_title(); ?>
+		</h3>
 
 			<?php if ( have_posts() ) : ?>
 				<?php
