@@ -20,16 +20,6 @@
 	<?php wp_head(); ?>
 </head>
 
-<?php
-$object = get_queried_object();
-// var_dump( $object );
-
-$backgroundImage = get_field('background_image', $object->name);
-if (!empty($backgroundImage)) {
-	$backgroundImageUrl = $backgroundImage['url'];
-}
-?>
-
 <body <?php body_class(); ?>>
 
 <input type="checkbox" id="menuToggler" class="input-toggler" />
@@ -53,7 +43,7 @@ if (!empty($backgroundImage)) {
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wheat' ); ?></a>
 
-	<header id="masthead" class="site-header" style="background-image:url(<?php if (!empty($backgroundImageUrl)) { echo $backgroundImageUrl; } ?>)">
+	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="site-branding">
 				<?php the_custom_logo(); ?>
