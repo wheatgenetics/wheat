@@ -16,13 +16,14 @@ get_header();
 ?>
 
 	<div class="container">
-		<div id="page-title">
-			<?php the_title(); ?>
-		</div>
+		<?php get_sidebar(); ?>
+
 	
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
-
+			<div id="page-title">
+			<?php the_title(); ?>
+		</div>
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -42,5 +43,4 @@ get_header();
 	</div>
 
 <?php
-get_sidebar();
 get_footer();
