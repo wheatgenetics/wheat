@@ -15,8 +15,12 @@
 
 	<div id="sponsors">
 		<div class="container">
-			<p>SPONSORS</p>
+			<div class="left-wing">
+			</div>
+
 			<div id="sponsors-img-container">
+				<p>SPONSORS</p>
+
 				<?php
 				$query = new WP_Query(array(
 					'post_type' => 'sponsors',
@@ -34,14 +38,33 @@
 				wp_reset_query();
 				?>
 			</div>
+
+			<div class="right-wing">
+			</div>
 		</div>
 	</div>
 			
 	<footer id="colophon" class="site-footer">
 		<div class="container">
+			<div class="left-wing">
+			</div>
+
 			<div id="kstate-logo-holder">
 				<img id="kstate-logo" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasStateUniversity.png" />
+
+				<div id="contact">
+				Kansas State University
+				<br>4702 Throckmorton PSC
+				<br>1712 Claflin Road
+				<br>Manhattan, KS 66506
+				<br>
+				<br>Email: <a href="mailto:jpoland@ksu.edu">jpoland@ksu.edu</a>
+				<br>Phone: <a href="tel:1-785-532-2709">+1-785-532-2709</a>
+				<br>Fax: +1-785-532-5692
 			</div>
+			</div>
+
+			<div></div>
 			
 			<nav class="social-menu">
 				<?php
@@ -51,15 +74,7 @@
 				?>
 			</nav>
 
-			<div id="contact">
-				Kansas State University
-				<br>4702 Throckmorton PSC
-				<br>1712 Claflin Road
-				<br>Manhattan, KS 66506
-				<br>
-				<br>Email: <a href="mailto:jpoland@ksu.edu">jpoland@ksu.edu</a>
-				<br>Phone: <a href="tel:1-785-532-2709">+1-785-532-2709</a>
-				<br>Fax: +1-785-532-5692
+			<div class="right-wing">
 			</div>
 		</div>
 	</footer><!-- #colophon -->
