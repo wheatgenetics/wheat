@@ -53,6 +53,9 @@ if (!empty($backgroundImage)) {
 
 	<header id="masthead" class="site-header" style="background-image:url(<?php if (!empty($backgroundImageUrl)) { echo $backgroundImageUrl; } ?>)">
 		<div class="container">
+			<div class="left-wing">
+			</div>
+
 			<div class="site-branding">
 				<?php the_custom_logo(); ?>
 				<div class="site-branding__text">
@@ -87,8 +90,17 @@ if (!empty($backgroundImage)) {
 				?>
 			</nav>
 
+			<div class="right-wing">
+			</div>
+
+			<div class="left-wing">
+			</div>
+
 			<div id="banner-text">
 				<?php the_field('banner_text'); ?>
+			</div>
+
+			<div class="right-wing">
 			</div>
 		</div>
 	</header><!-- #masthead -->

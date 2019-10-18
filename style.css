@@ -961,6 +961,7 @@ a:active {
   padding-top: 25px;
   width: 100%;
   font-size: 70%;
+  grid-column: 2 / span 3;
 }
 
 .site-header #banner-text p {
@@ -969,6 +970,10 @@ a:active {
 
 .site-header .right-wing {
   background-color: #472979;
+}
+
+.home .site-header .right-wing {
+  background-color: transparent;
 }
 
 @media screen and (min-width: 900px) {
