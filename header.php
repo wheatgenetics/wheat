@@ -45,6 +45,9 @@
 
 	<header id="masthead" class="site-header">
 		<div class="container">
+			<div class="left-wing">
+			</div>
+
 			<div class="site-branding">
 				<?php the_custom_logo(); ?>
 				<div class="site-branding__text">
@@ -78,6 +81,9 @@
 				) );
 				?>
 			</nav>
+
+			<div class="right-wing">
+			</div>
 		</div>
 	</header><!-- #masthead -->
 
