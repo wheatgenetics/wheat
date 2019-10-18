@@ -527,33 +527,27 @@ body {
 }
 
 .container {
-  max-width: 1500px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 10% 15% 50% 15% 10%;
 }
 
 @media screen and (min-width: 900px) {
-  .container {
+  /* .container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
+  } */
 }
 
 aside#secondary {
-  display: flex;
-  flex-direction: column;
-  /* flex-basis: 100%; */
-  flex: 1;
+  
 }
 
 #primary {
-  display: flex;
-  flex-direction: column;
-  /* flex-basis: 100%; */
-  flex: 4;
+  grid-column: 3 / span 2;
 }
 
 hr {
@@ -885,7 +879,7 @@ a:active {
 --------------------------------------------------------------*/
 .site-header {
   position: relative;
-  padding: 0 10px;
+  padding: 0;
   /* z-index: -1; */
   
 }
@@ -971,6 +965,10 @@ a:active {
 
 .site-header #banner-text p {
   margin: 0 0 1em;
+}
+
+.site-header .right-wing {
+  background-color: #472979;
 }
 
 @media screen and (min-width: 900px) {
@@ -1121,8 +1119,8 @@ Header Menu
     display: block;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 0;
+    /* justify-content: center; */
+    padding: 0 0 0 2.3em;
   }
 
   .main-navigation ul ul {
@@ -1243,13 +1241,6 @@ Header Menu
   background-color: #333;
 }
 
-footer .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3.5em;
-  /* justify-content: space-between; */
-}
-
 @media screen and (min-width: 600px) {
   .site-footer .container {
     padding: 2em 2em 3em;
@@ -1271,11 +1262,6 @@ footer .social-menu {
 footer .social-menu ul a {
   padding: 0 .7em;
   line-height: 1em;
-}
-
-footer #contact {
-  grid-column-start: 1;
-  grid-column-end: 3;
 }
 
 /*--------------------------------------------------------------
@@ -1631,12 +1617,14 @@ object {
       
       #sponsors p {
         margin-top: 0;
+        width: 100%;
       }
       
       #sponsors-img-container {
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;
+        grid-column: 2 / span 3;
       }
       
       #sponsors img {
