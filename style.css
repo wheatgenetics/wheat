@@ -1310,6 +1310,13 @@ footer #contact {
   /* Make sure select elements fit in widgets. */
 }
 
+.widget h2.widget-title {
+  font-size: 1.2em;
+  color: #472979;
+  text-transform: uppercase;
+  margin-top: 1.6em;
+}
+
 .widget select {
   max-width: 100%;
 }
