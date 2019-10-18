@@ -30,6 +30,7 @@ get_header();
 					$journal = get_field('journal');
 					$publication_date = get_field('publication_date');
 					$link = get_field('link');
+					$journal_date = [];
 				?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<header class="entry-header">
@@ -48,26 +49,27 @@ get_header();
 						</header><!-- .entry-header -->
 
 						<div class="entry-content">
-							<?php
-							$authors = get_field('authors');
-							
+							<?php													
 							if (!empty($authors)) {
-								echo $authors;
+								echo "<p>" . $authors . "</p>";
 							}
 
 							if (!empty($journal)) {
-								echo $journal;
+								$journal_date[] = $journal;
 							}
 							
 							if (!empty($publication_date)) {
-								echo $publication_date;
+								$journal_date[] = $publication_date;
 							}
+
+							echo "<p class='gray' style='text-transform:uppercase;'>" . implode(' | ', $journal_date) . "</p>";
 
 							wp_link_pages( array(
 								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
 								'after'  => '</div>',
 							) );
 							?>
+							
 						</div><!-- .entry-content -->
 
 						<footer class="entry-footer">
