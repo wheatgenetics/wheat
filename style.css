@@ -393,11 +393,11 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: #2D2C2C;
   font-family: "Raleway", sans-serif;
   font-size: 14.4px;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.7;
   font-weight: 600;
 }
 
@@ -450,7 +450,7 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.0em;
 }
 
 dfn,
@@ -503,6 +503,10 @@ ins {
 
 big {
   font-size: 125%;
+}
+
+.gray {
+  color: #A5A4A4;
 }
 
 /*--------------------------------------------------------------
@@ -980,7 +984,7 @@ a:active {
   }
 
   .site-header .social-menu {
-    padding: 3.0em 0 0.45em;
+    padding: 2.9em 0 0.45em;
     /* display: block; */
     /* width: 20%; */
     display: flex;
@@ -1185,6 +1189,15 @@ Header Menu
   display: none;
 }
 
+article.publications {
+  border-bottom: .1em dotted #dbd9d1;
+  padding: 20px 0;
+}
+
+article.publications:last-of-type {
+  border-bottom: none;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1192,9 +1205,14 @@ Header Menu
   padding: 0;
 }
 
-.entry-title a {
+h3.entry-title {
+  line-height: 1.2;
+  margin: 0.7em 0;
+}
+
+h3.entry-title a {
   color: #472979;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 0.9em;
 }
 
