@@ -11,41 +11,44 @@ get_header();
 ?>
 
 	<div class="container">
-		<?php get_sidebar(); ?>
+		<div class="left-wing">
+		</div>
 		
+		<?php get_sidebar(); ?>
 		
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
-			<h3 id="page-title">
-			<?php post_type_archive_title(); ?>
-		</h3>
+				<h3 id="page-title">
+					<?php post_type_archive_title(); ?>
+				</h3>
 
-			<?php if ( have_posts() ) : ?>
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
+				<?php if ( have_posts() ) :
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
 
-					/*
-					* Include the Post-Type-specific template for the content.
-					* If you want to override this in a child theme, then include a file
-					* called content-___.php (where ___ is the Post Type name) and that will be used instead.
-					*/
-					get_template_part( 'template-parts/content', get_post_type() );
+						/*
+						* Include the Post-Type-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+						*/
+						get_template_part( 'template-parts/content', get_post_type() );
 
-				endwhile;
+					endwhile;
 
-				the_posts_navigation();
+					the_posts_navigation();
 
-			else :
+				else :
 
-				get_template_part( 'template-parts/content', 'none' );
+					get_template_part( 'template-parts/content', 'none' );
 
-			endif;
-			?>
-
+				endif;
+				?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
+
+		<div class="right-wing">
+		</div>
 	</div>
 
 <?php
