@@ -980,7 +980,7 @@ a:active {
   }
 
   .site-header .social-menu {
-    padding-top: 3.45em;
+    padding: 3.0em 0 0.45em;
     /* display: block; */
     /* width: 20%; */
     display: flex;
@@ -1064,7 +1064,7 @@ Header Menu
   padding: .5em 1em .5em 0;
   text-decoration: none;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #C1BCBC;
 }
 
 .home .main-navigation a {
@@ -1188,8 +1188,14 @@ Header Menu
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 2.5em 0 0;
-  padding: 0 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.entry-title a {
+  color: #472979;
+  font-weight: 400;
+  font-size: 0.9em;
 }
 
 .page-links {
