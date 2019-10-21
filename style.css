@@ -961,6 +961,7 @@ a:active {
 .site-header .social-menu {
   display: none;
   background-color: #472979;
+  height: 90px;
 }
 
 .home .site-header .social-menu {
@@ -984,11 +985,15 @@ a:active {
   }
 
   .site-header .social-menu {
-    padding: 2.9em 0 0.45em;
+    padding: 0;
     /* display: block; */
     /* width: 20%; */
     display: flex;
     flex: 1;
+  }
+
+  .menu-social-container {
+    margin-top: auto; 
   }
 
   .site-header .site-branding {
@@ -998,9 +1003,12 @@ a:active {
 
   .site-header .main-navigation {
     /* width: 60%; */
-    /* display: flex; */
+    display: flex;
     /* flex-basis: 100%; */
     flex: 3;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
   }
 }
 
@@ -1016,6 +1024,10 @@ Header Menu
   clear: left;
   background-color: #472979;
   /* padding-top: 35px; */
+  height: 90px;
+}
+
+.main-navigation .menu-main-menu-container {
 }
 
 .home .main-navigation {
@@ -1060,6 +1072,7 @@ Header Menu
 
 .main-navigation li {
   position: relative;
+  display: flex;
 }
 
 .main-navigation a {
@@ -1127,6 +1140,7 @@ Header Menu
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 0;
+    height: 100%;
   }
 
   .main-navigation ul ul {
@@ -1145,12 +1159,16 @@ Header Menu
   }
 
   .main-navigation ul li a {
-    padding: 5.0em 1.2em 1.4em;
+    padding: 0 1.2em 1.4em;
+    margin-top: auto; 
+  }
+
+  .main-navigation ul li.current-menu-item {
+    background-color: #ffffff;
   }
 
   .main-navigation ul li.current-menu-item a {
     color: #404040;
-    background-color: #ffffff;
   }
 }
 
