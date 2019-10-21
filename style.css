@@ -1189,12 +1189,12 @@ Header Menu
   display: none;
 }
 
-article.publications {
+article {
   border-bottom: .1em dotted #dbd9d1;
   padding: 20px 0;
 }
 
-article.publications:last-of-type {
+article:last-of-type {
   border-bottom: none;
 }
 
