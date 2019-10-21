@@ -533,6 +533,11 @@ body {
 .container {
   max-width: 1500px;
   margin: 0 auto;
+  padding: 0 1em;
+}
+
+.site-header .container {
+  padding-right: 0;
 }
 
 @media screen and (min-width: 900px) {
@@ -787,12 +792,17 @@ a:active {
   justify-content: flex-end;
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 .social-menu ul a {
   display: block;
   padding: .5em .7em;
   color: white;
+}
+
+.social-menu ul a:last-of-type {
+  padding-right: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -868,7 +878,7 @@ a:active {
 ## Global layouts
 --------------------------------------------------------------*/
 .site-content {
-  padding: 1em;
+  /* padding: 1em; */
 }
 
 @media screen and (min-width: 600px) {
@@ -889,7 +899,7 @@ a:active {
 --------------------------------------------------------------*/
 .site-header {
   position: relative;
-  padding: 0 10px;
+  padding: 0;
   /* z-index: -1; */
   
 }
@@ -990,6 +1000,7 @@ a:active {
     /* width: 20%; */
     display: flex;
     flex: 1;
+    justify-content: flex-end;
   }
 
   .menu-social-container {
@@ -1210,10 +1221,21 @@ Header Menu
 article {
   border-bottom: .1em dotted #dbd9d1;
   padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 article:last-of-type {
   border-bottom: none;
+}
+
+.news header.entry-header, .news .entry-content {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
 .page-content,
@@ -1280,7 +1302,7 @@ h3.entry-title a {
 --------------------------------------------------------------*/
 .site-footer {
   position: relative;
-  padding: 1em;
+  padding: 1em 0;
   color: white;
   background-color: #333;
 }
@@ -1294,7 +1316,8 @@ footer .container {
 
 @media screen and (min-width: 600px) {
   .site-footer .container {
-    padding: 2em 2em 3em;
+    padding-top: 2em;
+    padding-bottom: 3em;
   }
 }
 
@@ -1667,14 +1690,14 @@ object {
         width: 100%;
         background-color: #472979;
         color: white;
-        padding: 1.5em 10px 0;
+        padding: 1.5em 0 0;
         font-size: 0.65em;
       }
       
       @media screen and (min-width: 600px) {
         #sponsors .container {
-          padding-left: 34px;
-          padding-right: 34px;
+          /* padding-left: 34px;
+          padding-right: 34px; */
         }
       }
       
