@@ -797,7 +797,7 @@ a:active {
 
 .social-menu ul a {
   display: block;
-  padding: .5em .7em;
+  padding: 1em .7em;
   color: white;
 }
 
@@ -1019,7 +1019,8 @@ a:active {
     flex: 3;
     display: flex;
     /* align-items: center; */
-    justify-content: center;
+    justify-content: left;
+    padding-left: 1.2em;
   }
 }
 
@@ -1231,6 +1232,10 @@ article:last-of-type {
   border-bottom: none;
 }
 
+article img.attachment-thumbnail {
+  margin: 0 1em 1em 0;
+}
+
 .news header.entry-header, .news .entry-content {
   display: flex;
   flex-direction: column;
@@ -1247,7 +1252,7 @@ article:last-of-type {
 
 h3.entry-title {
   line-height: 1.2;
-  margin: 0.7em 0;
+  margin: 0;
 }
 
 h3.entry-title a {
