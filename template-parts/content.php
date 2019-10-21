@@ -18,9 +18,9 @@ $journal_date = [];
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php the_post_thumbnail('thumbnail'); ?>
+
 	<header class="entry-header">
-		<?php the_post_thumbnail('thumbnail'); ?>
-	
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h3 class="entry-title">', '</h3>' );
