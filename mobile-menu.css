@@ -53,10 +53,16 @@
     height: var(--toggler-size);
     position: relative;
     position: absolute;
-    top: 3.5em;
+    top: 6.6em;
     right: 10px;
     cursor: pointer;
     z-index: 2;
+  }
+
+  @media screen and (min-width: 783px) {
+    .menu-toggler {
+      top: 5.5em;
+    }
   }
 
   .menu-toggler__line {
