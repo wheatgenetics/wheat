@@ -609,6 +609,20 @@ img {
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */
+  background-color: #472979;
+
+}
+
+.wp-block-image {
+  margin: 0;
+}
+
+.wp-block-image figcaption {
+  background-color: #472979;
+  color: #ffffff;
+  margin: 0;
+  vertical-align: top;
+  padding-bottom: 10px;
 }
 
 table {
