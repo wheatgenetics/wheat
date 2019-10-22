@@ -53,7 +53,7 @@ $journal_date = [];
 			$journal_date[] = $publication_date;
 		}
 
-		echo "<p class='gray' style='text-transform:uppercase;'>" . implode(' | ', $journal_date) . "</p>";
+		echo "<p class='gray' style='text-transform:uppercase;'>" . implode('&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;', $journal_date) . "</p>";
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
