@@ -59,20 +59,22 @@ $journal_date = [];
 				$journal_date[] = $publication_date;
 			}
 
-			the_content(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( '', 'wheat' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
+			// the_content(
+			// 	sprintf(
+			// 		wp_kses(
+			// 			/* translators: %s: Name of current post. Only visible to screen readers */
+			// 			__( '', 'wheat' ),
+			// 			array(
+			// 				'span' => array(
+			// 					'class' => array(),
+			// 				),
+			// 			)
+			// 		),
+			// 		get_the_title()
+			// 	)
+			// );
+
+			the_excerpt();
 
 			echo "<p class='gray' style='text-transform:uppercase;'>" . implode('&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;', $journal_date) . "</p>";
 
