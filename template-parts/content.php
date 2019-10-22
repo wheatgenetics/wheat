@@ -9,14 +9,6 @@
 
 ?>
 
-<?php
-$authors = get_field('authors');
-$journal = get_field('journal');
-$publication_date = get_field('publication_date');
-$link = get_field('link');
-$journal_date = [];
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php the_post_thumbnail('thumbnail'); ?>
 
@@ -25,7 +17,7 @@ $journal_date = [];
 		if ( is_singular() ) :
 			the_title( '<h3 class="entry-title">', '</h3>' );
 		else :
-			the_title( '<h3 class="entry-title"><a href="' . $link . '" rel="bookmark" target="_blank">', '</a></h3>' );
+			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
@@ -40,27 +32,29 @@ $journal_date = [];
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php													
-		if (!empty($authors)) {
-			echo "<p>" . $authors . "</p>";
-		}
+		<?php
+		the_content(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wheat' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			)
+		);
 
-		if (!empty($journal)) {
-			$journal_date[] = $journal;
-		}
-		
-		if (!empty($publication_date)) {
-			$journal_date[] = $publication_date;
-		}
-
-		echo "<p class='gray' style='text-transform:uppercase;'>" . implode('&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;', $journal_date) . "</p>";
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
-			'after'  => '</div>',
-		) );
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'wheat' ),
+				'after'  => '</div>',
+			)
+		);
 		?>
-		
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
