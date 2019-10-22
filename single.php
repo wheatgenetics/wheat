@@ -89,7 +89,7 @@ $link = get_field('original_source_link');
 
 							<br>
 
-							<a href="<?php echo $link; ?>" class="wp-block-button__link" target="_blank">Go to original story</a>
+							<a href="<?php echo $link; ?>" class="dark-gray-button" target="_blank">Go to original story</a>
 						</div><!-- .entry-content -->
 
 						<footer class="entry-footer">
