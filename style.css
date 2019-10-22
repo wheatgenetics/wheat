@@ -460,13 +460,50 @@ p {
   margin-bottom: 0.7em;
 }
 
-dfn, cite, em, i {
+dfn, em, i {
   font-style: italic;
 }
 
-blockquote {
-  margin: 0 1.5em;
+cite {
+  font-style: normal;
+  color: #3D4451;
 }
+
+blockquote, .wp-block-quote.is-large, .wp-block-quote.is-style-large {
+  margin: 2em;
+  width: 50%;
+}
+
+.wp-block-quote.is-large cite, .wp-block-quote.is-large footer, .wp-block-quote.is-style-large cite, .wp-block-quote.is-style-large footer {
+}
+
+blockquote p {
+  color: #472979;
+}
+
+blockquote p:before {
+  content: open-quote;
+}
+
+blockquote p:after {
+  content: close-quote;
+}
+
+.wp-block-quote.is-large p, .wp-block-quote.is-style-large p {
+  font-style: normal;
+}
+
+.wp-block-quote.is-large cite, .wp-block-quote.is-large footer, .wp-block-quote.is-style-large cite, .wp-block-quote.is-style-large footer {
+  font-size: 12px;
+}
+
+cite:before, .wp-block-quote.is-large cite:before, .wp-block-quote.is-style-large cite:before {
+  content: "~ ";
+}
+
+/* .wp-block-quote.is-large cite:before, .wp-block-quote.is-large footer:before, .wp-block-quote.is-style-large cite:before, .wp-block-quote.is-style-large footer:before {
+  content: '~\00a0\00a0\00a0\00a0\00a0';
+} */
 
 address {
   margin: 0 0 1.5em;
@@ -603,7 +640,7 @@ img {
 }
 
 figure {
-  margin: 1em 0;
+  margin: 0;
   /* Extra wide images within figure tags don't overflow the content area. */
   background-color: #472979;
 }
@@ -645,7 +682,21 @@ button:hover, button:active, button:focus, input[type="button"]:hover, input[typ
   color: #404040;
 }
 
-.wp-block-button__link {
+.dark-gray-button {
+  background-color: #32373c;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  color: #ffffff;
+}
+
+.wp-block-button__link, .dark-gray-button {
   border-radius: 0;
   font-size: .7em;
   padding: .9em 2.3em;
@@ -653,7 +704,7 @@ button:hover, button:active, button:focus, input[type="button"]:hover, input[typ
   text-transform: uppercase;
 }
 
-.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited {
+.dark-gray-button:active, .dark-gray-button:focus, .dark-gray-button:hover, .dark-gray-button:visited {
   color: #ffffff;
 }
 
