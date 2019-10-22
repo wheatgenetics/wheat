@@ -1181,7 +1181,18 @@ Header Menu
 
   .main-navigation ul li.current-menu-item a {
     color: #404040;
+    position: relative;
   }
+
+  .main-navigation ul li.current-menu-item a:before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 12px;
+    left: 25%;
+    border-bottom: 1px solid #FDC345;
+}
 }
 
 @media screen and (min-width: 1150px) {
