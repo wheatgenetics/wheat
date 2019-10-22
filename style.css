@@ -654,6 +654,11 @@ input[type="submit"]:focus {
   font-size: .7em;
   padding: .9em 2.3em;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited {
+  color: #ffffff;
 }
 
 input[type="text"],
@@ -878,7 +883,7 @@ a:active {
 ## Global layouts
 --------------------------------------------------------------*/
 .site-content {
-  /* padding: 1em; */
+  padding: 0 0 2em 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -1262,6 +1267,7 @@ article img.attachment-thumbnail {
 }
 
 h3.entry-title {
+  color: #472979;
   line-height: 1.2;
   margin: 0 0 0.6em 0;
 }
