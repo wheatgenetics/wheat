@@ -450,7 +450,7 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1.0em;
+  margin-bottom: 0.7em;
 }
 
 dfn,
@@ -1263,7 +1263,7 @@ article img.attachment-thumbnail {
 
 h3.entry-title {
   line-height: 1.2;
-  margin: 0;
+  margin: 0 0 0.6em 0;
 }
 
 h3.entry-title a {
