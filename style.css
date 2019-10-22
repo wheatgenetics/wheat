@@ -905,7 +905,7 @@ a:active {
 }
 
 .home .site-header {
-  padding: 0 10px 1em;
+  padding: 0 0 1em;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1019,8 +1019,10 @@ a:active {
     flex: 3;
     display: flex;
     /* align-items: center; */
-    justify-content: left;
-    padding-left: 1.2em;
+    justify-content: center;
+    /* padding-left: 1.2em; */
+    background-color: #472979;
+    height: 90px;
   }
 }
 
@@ -1034,9 +1036,7 @@ Header Menu
   font-size: .75em;
   letter-spacing: 0.12em;
   clear: left;
-  background-color: #472979;
   /* padding-top: 35px; */
-  height: 90px;
 }
 
 .main-navigation .menu-main-menu-container {
