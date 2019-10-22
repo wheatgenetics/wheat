@@ -1714,6 +1714,7 @@ object {
         #sponsors .container {
           /* padding-left: 34px;
           padding-right: 34px; */
+          flex-direction: column;
         }
       }
       
