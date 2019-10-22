@@ -12,7 +12,7 @@ get_header();
 
 <?php
 $publication_date = get_field('publication_date');
-$link = get_field('link');
+$link = get_field('original_source_link');
 ?>
 
 	<div class="container">
@@ -51,8 +51,8 @@ $link = get_field('link');
 
 						<div class="entry-content">
 							<?php
-							the_post_thumbnail('medium', ['class' => 'alignleft']);
-							the_post_thumbnail_caption();
+							// the_post_thumbnail('medium', ['class' => 'alignleft']);
+							// the_post_thumbnail_caption();
 								
 							if (!empty($authors)) {
 								echo "<p>" . $authors . "</p>";
@@ -82,10 +82,14 @@ $link = get_field('link');
 								'after'  => '</div>',
 							) );
 							?>
-								
+							
+							<br>
+
 							<hr class="dotted">
 
-							Go to original story
+							<br>
+
+							<a href="<?php echo $link; ?>" class="wp-block-button__link" target="_blank">Go to original story</a>
 						</div><!-- .entry-content -->
 
 						<footer class="entry-footer">
