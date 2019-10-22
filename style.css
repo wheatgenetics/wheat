@@ -1247,7 +1247,7 @@ article img.attachment-thumbnail {
   margin: 0 1em 1em 0;
 }
 
-.news header.entry-header, .news .entry-content {
+.header-content-wrapper {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
