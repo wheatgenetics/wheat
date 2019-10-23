@@ -84,10 +84,10 @@ $website = get_field('website');
 
 			if ($post_type == 'people') {
 				echo '<p>' . $bio . '</p>';
-				echo '<br>' . $office_location;
+				echo $office_location;
 				echo '<br><a href="mailto:' . $email . '" target="_blank">' . $email . '</a>';
 				echo '<br><a href="tel:' . $phone . '" target="_blank">' . $phone . '</a>';
-				echo '<br><a href="' . $website . '" target="_blank">' . $website . '</a>';
+				// echo '<br><a href="' . $website . '" target="_blank">' . $website . '</a>';
 			}
 
 			if ($post_type == 'publications' || $post_type == 'news') {
