@@ -30,14 +30,12 @@
 </label>
 
 <aside class="sidebar">
-	<ul class="menu">
-		<li class="menu__item"><a class="menu__link current" href=".">Home</a></li>
-		<li class="menu__item"><a class="menu__link" href="./people/">People</a></li>
-		<li class="menu__item"><a class="menu__link" href="./projects/">Projects</a></li>
-		<li class="menu__item"><a class="menu__link" href="./publications/">Publications</a></li>
-		<li class="menu__item"><a class="menu__link" href="./news/">News</a></li>
-		<li class="menu__item"><a class="menu__link" href="./resources/">Resources</a></li>
-	</ul>
+	<?php
+	wp_nav_menu( array(
+		'theme_location' => 'menu-1',
+		'menu_id'        => 'primary-menu',
+	) );
+	?>
 </aside>
 	
 <div id="page" class="site">

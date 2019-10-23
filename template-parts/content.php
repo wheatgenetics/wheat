@@ -9,50 +9,84 @@
 
 ?>
 
+<?php
+$post_type = get_post_type();
+$authors = get_field('authors');
+$journal = get_field('journal');
+$publication_date = get_field('publication_date');
+$link = get_field('link');
+$journal_date = [];
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+	<?php the_post_thumbnail('thumbnail'); ?>
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				wheat_posted_on();
-				wheat_posted_by();
+	<div class="header-content-wrapper">
+		<header class="entry-header">
+			<?php
+			if ($post_type == 'publications') {
+				the_title( '<h3 class="entry-title"><a href="' . $link . '" rel="bookmark">', '</a></h3>' );
+			} else {
+				if (is_singular()) {
+					the_title( '<h3 class="entry-title">', '</h3>' );
+				} else {
+					the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+				}
+			}
+
+			if ( 'post' === get_post_type() ) :
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+				<div class="entry-meta">
+					<?php
+					wheat_posted_on();
+					wheat_posted_by();
+					?>
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</header><!-- .entry-header -->
 
-	<?php wheat_post_thumbnail(); ?>
+		<div class="entry-content">
+			<?php													
+			if (!empty($authors)) {
+				echo "<p>" . $authors . "</p>";
+			}
 
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wheat' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+			if (!empty($journal)) {
+				$journal_date[] = $journal;
+			}
+			
+			if (!empty($publication_date)) {
+				$journal_date[] = $publication_date;
+			}
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
+			// the_content(
+			// 	sprintf(
+			// 		wp_kses(
+			// 			/* translators: %s: Name of current post. Only visible to screen readers */
+			// 			__( '', 'wheat' ),
+			// 			array(
+			// 				'span' => array(
+			// 					'class' => array(),
+			// 				),
+			// 			)
+			// 		),
+			// 		get_the_title()
+			// 	)
+			// );
 
+			the_excerpt();
+
+			echo "<p class='gray' style='text-transform:uppercase;'>" . implode('&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;', $journal_date) . "</p>";
+
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
+				'after'  => '</div>',
+			) );
+			?>
+			
+		</div><!-- .entry-content -->
+	</div>
+	
 	<footer class="entry-footer">
 		<?php wheat_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

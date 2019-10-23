@@ -10,7 +10,14 @@
 get_header();
 ?>
 
+<?php
+$publication_date = get_field('publication_date');
+$link = get_field('original_source_link');
+?>
+
 	<div class="container">
+		<?php get_sidebar(); ?>
+
 		<div id="page-title">
 			<?php post_type_archive_title(); ?>
 		</div>
@@ -18,26 +25,89 @@ get_header();
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
+				<?php
+				while ( have_posts() ) :
+					the_post();
+				?>
 
-				get_template_part( 'template-parts/content', get_post_type() );
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<header class="entry-header">
+							<?php
 
-				the_post_navigation();
+							the_title( '<h3 class="entry-title">', '</h3>' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+							echo "<p class='gray' style='text-transform:uppercase;'>" . $publication_date . "</p>";
 
-			endwhile; // End of the loop.
-			?>
+							if ( 'post' === get_post_type() ) :
+								?>
+								<div class="entry-meta">
+									<?php
+									wheat_posted_on();
+									wheat_posted_by();
+									?>
+								</div><!-- .entry-meta -->
+							<?php endif; ?>
+						</header><!-- .entry-header -->
 
+						<div class="entry-content">
+							<?php
+							// the_post_thumbnail('medium', ['class' => 'alignleft']);
+							// the_post_thumbnail_caption();
+								
+							if (!empty($authors)) {
+								echo "<p>" . $authors . "</p>";
+							}
+							
+							if (!empty($publication_date)) {
+								$journal_date[] = $publication_date;
+							}
+
+							the_content(
+								sprintf(
+									wp_kses(
+										/* translators: %s: Name of current post. Only visible to screen readers */
+										__( '', 'wheat' ),
+										array(
+											'span' => array(
+												'class' => array(),
+											),
+										)
+									),
+									get_the_title()
+								)
+							);
+
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
+								'after'  => '</div>',
+							) );
+							?>
+							
+							<br>
+
+							<hr class="dotted">
+
+							<br>
+
+							<a href="<?php echo $link; ?>" class="dark-gray-button" target="_blank">Go to original story</a>
+						</div><!-- .entry-content -->
+
+						<footer class="entry-footer">
+							<?php wheat_entry_footer(); ?>
+						</footer><!-- .entry-footer -->
+					</article><!-- #post-<?php the_ID(); ?> -->
+
+					<?php
+
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+
+				endwhile; // End of the loop.
+				?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
-	</div>
-	
+	</div><!-- .container -->	
 <?php
-get_sidebar();
 get_footer();

@@ -13,7 +13,6 @@ get_header();
 	<div class="container">
 		<?php get_sidebar(); ?>
 		
-		
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
 			<h3 id="page-title">
