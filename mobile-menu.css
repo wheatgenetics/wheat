@@ -59,9 +59,13 @@
     z-index: 2;
   }
 
+  .admin-bar .menu-toggler{
+    top: 6.6em;
+  }
+
   @media screen and (min-width: 783px) {
-    .menu-toggler {
-      /* top: 5.5em; */
+    .admin-bar .menu-toggler{
+      top: 5.5em;
     }
   }
 
