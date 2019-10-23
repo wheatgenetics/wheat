@@ -17,6 +17,11 @@ $journal = get_field('journal');
 $publication_date = get_the_date( 'm.d.Y' );
 $link = get_field('link');
 $journal_date = [];
+$bio = get_field('bio');
+$email = get_field('email');
+$office_location = get_field('office_location');
+$phone = get_field('phone');
+$website = get_field('website');
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -77,7 +82,17 @@ $journal_date = [];
 
 			the_excerpt();
 
-			echo "<p class='gray' style='text-transform:uppercase;'>" . implode('&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;', $journal_date) . "</p>";
+			if ($post_type == 'people') {
+				echo '<p>' . $bio . '</p>';
+				echo '<br>' . $office_location;
+				echo '<br><a href="mailto:' . $email . '" target="_blank">' . $email . '</a>';
+				echo '<br><a href="tel:' . $phone . '" target="_blank">' . $phone . '</a>';
+				echo '<br><a href="' . $website . '" target="_blank">' . $website . '</a>';
+			}
+
+			if ($post_type == 'publications' || $post_type == 'news') {
+				echo "<p class='gray' style='text-transform:uppercase;'>" . implode('&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;', $journal_date) . "</p>";
+			}
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
 				'after'  => '</div>',
