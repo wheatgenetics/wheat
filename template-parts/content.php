@@ -25,7 +25,7 @@ $journal_date = [];
 		<header class="entry-header">
 			<?php
 			if ($post_type == 'publications') {
-				the_title( '<h3 class="entry-title"><a href="' . $link . '" rel="bookmark">', '</a></h3>' );
+				the_title( '<h3 class="entry-title"><a href="' . $link . '" rel="bookmark" target="_blank">', '</a></h3>' );
 			} else {
 				if (is_singular()) {
 					the_title( '<h3 class="entry-title">', '</h3>' );
