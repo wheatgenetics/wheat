@@ -13,7 +13,8 @@
 $post_type = get_post_type();
 $authors = get_field('authors');
 $journal = get_field('journal');
-$publication_date = get_field('publication_date');
+// $publication_date = get_field('publication_date');
+$publication_date = get_the_date( 'm.d.Y' );
 $link = get_field('link');
 $journal_date = [];
 ?>
@@ -77,7 +78,6 @@ $journal_date = [];
 			the_excerpt();
 
 			echo "<p class='gray' style='text-transform:uppercase;'>" . implode('&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;', $journal_date) . "</p>";
-
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
 				'after'  => '</div>',
