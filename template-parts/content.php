@@ -21,7 +21,6 @@ $bio = get_field('bio');
 $email = get_field('email');
 $office_location = get_field('office_location');
 $phone = get_field('phone');
-$website = get_field('website');
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -87,7 +86,6 @@ $website = get_field('website');
 				echo $office_location;
 				echo '<br><a href="mailto:' . $email . '" target="_blank">' . $email . '</a>';
 				echo '<br><a href="tel:' . $phone . '" target="_blank">' . $phone . '</a>';
-				// echo '<br><a href="' . $website . '" target="_blank">' . $website . '</a>';
 			}
 
 			if ($post_type == 'publications' || $post_type == 'news') {
