@@ -75,12 +75,13 @@
 					$post_id = get_the_ID();
 					$title = get_the_title();
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+					$publication_date = get_the_date();
 					
-					if (get_field('publication_date', $post_id)) {
-						$publication_date = get_field('publication_date', $post_id);
-					} else {
-						$publication_date = '';
-					}
+					// if (get_field('publication_date', $post_id)) {
+					// 	$publication_date = get_field('publication_date', $post_id);
+					// } else {
+					// 	$publication_date = '';
+					// }
 
 					if (get_field('journal', $post_id)) {
 						$journal = get_field('journal', $post_id);
