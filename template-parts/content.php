@@ -33,7 +33,7 @@ $website = get_field('website');
 			if ($post_type == 'publications') {
 				the_title( '<h3 class="entry-title"><a href="' . $link . '" rel="bookmark" target="_blank">', '</a></h3>' );
 			} else {
-				if (is_singular()) {
+				if (is_singular() || $post_type == 'people') {
 					the_title( '<h3 class="entry-title">', '</h3>' );
 				} else {
 					the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
