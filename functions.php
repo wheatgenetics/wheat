@@ -180,15 +180,16 @@ add_action( 'widgets_init', 'wheat_widgets_init' );
 function wheat_scripts() {
 	// Enqueue Google Fonts: Raleway and Libre Baskerville
 	wp_enqueue_style( 'wheat-fonts', wheat_fonts_url() );
+	
 	wp_enqueue_style( 'wheat-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'mobile-menu', get_template_directory_uri() . '/mobile-menu.css' );
 
-	wp_enqueue_script( 'wheat-navigation', get_template_directory_uri('jquery') . '/js/navigation.js', array(), '20151215', true );
-	wp_localize_script( 'wheat-navigation', 'wheatScreenReaderText', array(
-		'expand' => __('Expand child menu', 'wheat'),
-		'collapse' => __('Collapse child menu', 'wheat'),
+	wp_enqueue_script( 'wheat-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	// wp_localize_script( 'wheat-navigation', 'wheatScreenReaderText', array(
+	// 	'expand' => __('Expand child menu', 'wheat'),
+	// 	'collapse' => __('Collapse child menu', 'wheat'),
 		
-	) );
+	// ) );
 	wp_enqueue_script( 'wheat-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
