@@ -556,7 +556,7 @@ big {
 --------------------------------------------------------------*/
 
 html {
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 *, *:before, *:after {
@@ -578,7 +578,7 @@ body {
 }
 
 .site-header .container {
-  padding-right: 0;
+  /* padding-right: 0; */
 }
 
 @media screen and (min-width: 900px) {
