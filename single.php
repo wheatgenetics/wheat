@@ -18,6 +18,7 @@ $email = get_field('email');
 $office_location = get_field('office_location');
 $phone = get_field('phone');
 $project_website = get_field('project_website');
+$slider = get_field('slider');
 ?>
 
 	<div class="container">
@@ -36,6 +37,9 @@ $project_website = get_field('project_website');
 				?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<?php if (!empty($slider)) {
+							echo $slider;
+						} ?>
 						<?php the_post_thumbnail('thumbnail'); ?>
 
 						<div class="header-content-wrapper">
