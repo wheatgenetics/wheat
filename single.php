@@ -17,6 +17,7 @@ $bio = get_field('bio');
 $email = get_field('email');
 $office_location = get_field('office_location');
 $phone = get_field('phone');
+$project_website = get_field('project_website');
 ?>
 
 	<div class="container">
@@ -109,6 +110,11 @@ $phone = get_field('phone');
 
 								<?php if ($post_type == 'news') { ?>
 									<a href="<?php echo $link; ?>" class="dark-gray-button" target="_blank">Go to original story</a>
+								<?php } ?>
+
+								<?php if ($post_type == 'projects' && !empty($project_website)) { ?>
+									<br>
+									<a href="<?php echo $project_website; ?>" class="dark-gray-button" target="_blank">Visit project website</a>
 								<?php } ?>
 							</div><!-- .entry-content -->
 
