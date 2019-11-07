@@ -13,6 +13,10 @@ get_header();
 <?php
 $publication_date = get_field('publication_date');
 $link = get_field('original_source_link');
+$bio = get_field('bio');
+$email = get_field('email');
+$office_location = get_field('office_location');
+$phone = get_field('phone');
 ?>
 
 	<div class="container">
@@ -31,72 +35,87 @@ $link = get_field('original_source_link');
 				?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<header class="entry-header">
-							<?php
+						<?php the_post_thumbnail('thumbnail'); ?>
 
-							the_title( '<h3 class="entry-title">', '</h3>' );
+						<div class="header-content-wrapper">
+							<header class="entry-header">
+								<?php
 
-							echo "<p class='gray' style='text-transform:uppercase;'>" . $publication_date . "</p>";
+								the_title( '<h3 class="entry-title">', '</h3>' );
 
-							if ( 'post' === get_post_type() ) :
-								?>
-								<div class="entry-meta">
-									<?php
-									wheat_posted_on();
-									wheat_posted_by();
+								echo "<p class='gray' style='text-transform:uppercase;'>" . $publication_date . "</p>";
+
+								if ( 'post' === get_post_type() ) :
 									?>
-								</div><!-- .entry-meta -->
-							<?php endif; ?>
-						</header><!-- .entry-header -->
+									<div class="entry-meta">
+										<?php
+										wheat_posted_on();
+										wheat_posted_by();
+										?>
+									</div><!-- .entry-meta -->
+								<?php endif; ?>
+							</header><!-- .entry-header -->
 
-						<div class="entry-content">
-							<?php
-							// the_post_thumbnail('medium', ['class' => 'alignleft']);
-							// the_post_thumbnail_caption();
+							<div class="entry-content">
+								<?php
+								// the_post_thumbnail('medium', ['class' => 'alignleft']);
+								// the_post_thumbnail_caption();
+									
+								if (!empty($authors)) {
+									echo "<p>" . $authors . "</p>";
+								}
 								
-							if (!empty($authors)) {
-								echo "<p>" . $authors . "</p>";
-							}
-							
-							if (!empty($publication_date)) {
-								$journal_date[] = $publication_date;
-							}
+								if (!empty($publication_date)) {
+									$journal_date[] = $publication_date;
+								}
 
-							the_content(
-								sprintf(
-									wp_kses(
-										/* translators: %s: Name of current post. Only visible to screen readers */
-										__( '', 'wheat' ),
-										array(
-											'span' => array(
-												'class' => array(),
-											),
-										)
-									),
-									get_the_title()
-								)
-							);
+								if (!empty($title_position)) {
+									echo $title_position;
+								}
 
-							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
-								'after'  => '</div>',
-							) );
-							?>
-							
-							<br>
+								if ($post_type == 'people') {
+									echo '<p>' . $bio . '</p>';
+									echo $office_location;
+									echo '<br><a href="mailto:' . $email . '" target="_blank">' . $email . '</a>';
+									echo '<br><a href="tel:' . $phone . '" target="_blank">' . $phone . '</a>';
+								}
 
-							<hr class="dotted">
+								the_content(
+									sprintf(
+										wp_kses(
+											/* translators: %s: Name of current post. Only visible to screen readers */
+											__( '', 'wheat' ),
+											array(
+												'span' => array(
+													'class' => array(),
+												),
+											)
+										),
+										get_the_title()
+									)
+								);
 
-							<br>
+								wp_link_pages( array(
+									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
+									'after'  => '</div>',
+								) );
+								?>
+								
+								<!-- <br>
 
-							<?php if ($post_type == 'news') { ?>
-								<a href="<?php echo $link; ?>" class="dark-gray-button" target="_blank">Go to original story</a>
-							<?php } ?>
-						</div><!-- .entry-content -->
+								<hr class="dotted">
 
-						<footer class="entry-footer">
-							<?php wheat_entry_footer(); ?>
-						</footer><!-- .entry-footer -->
+								<br> -->
+
+								<?php if ($post_type == 'news') { ?>
+									<a href="<?php echo $link; ?>" class="dark-gray-button" target="_blank">Go to original story</a>
+								<?php } ?>
+							</div><!-- .entry-content -->
+
+							<footer class="entry-footer">
+								<?php wheat_entry_footer(); ?>
+							</footer><!-- .entry-footer -->
+						</div>
 					</article><!-- #post-<?php the_ID(); ?> -->
 
 					<?php
