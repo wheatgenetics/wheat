@@ -439,7 +439,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  text-transform: uppercase;
 }
 
 h2 {
@@ -1277,6 +1276,7 @@ h3.entry-title {
   color: #472979;
   line-height: 1.2;
   margin: 0 0 0.6em 0;
+  text-transform: uppercase;
 }
 
 h3.entry-title a {
