@@ -95,7 +95,6 @@ hr,
 hr.wp-block-separator {
   box-sizing: content-box;
   /* 1 */
-  /* height: 0; */
   /* 1 */
   overflow: visible;
   /* 2 */
@@ -107,15 +106,6 @@ hr.wp-block-separator {
   margin-bottom: 0;
   color: #dbd9d1;
 }
-
-/* hr.dotted {
-  border: none;
-  border-top: .1em dotted;
-  background-color: transparent;
-  height: 1px;
-  margin-bottom: 0;
-  color: #dbd9d1;
-} */
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -449,7 +439,6 @@ textarea {
   font-size: 14.4px;
   font-size: 0.9rem;
   line-height: 1.7;
-  /* font-weight: 600; */
 }
 
 @media screen and (min-width: 700px) {
@@ -557,10 +546,6 @@ cite:before,
   content: "~ ";
 }
 
-/* .wp-block-quote.is-large cite:before, .wp-block-quote.is-large footer:before, .wp-block-quote.is-style-large cite:before, .wp-block-quote.is-style-large footer:before {
-  content: '~\00a0\00a0\00a0\00a0\00a0';
-} */
-
 address {
   margin: 0 0 1.5em;
 }
@@ -624,18 +609,12 @@ html {
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
-  /* max-width: 1500px; */
-  /* margin: 0 auto; */
 }
 
 .container {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 1em;
-}
-
-.site-header .container {
-  /* padding-right: 0; */
 }
 
 @media screen and (min-width: 900px) {
@@ -652,14 +631,12 @@ body {
 aside#secondary {
   display: flex;
   flex-direction: column;
-  /* flex-basis: 100%; */
   flex: 1;
 }
 
 #primary {
   display: flex;
   flex-direction: column;
-  /* flex-basis: 100%; */
   flex: 4;
 }
 
@@ -698,7 +675,6 @@ dd {
 }
 
 img {
-  /* height: auto; */
   /* Make sure images are scaled correctly. */
   max-width: 100%;
   /* Adhere to container width. */
@@ -855,14 +831,12 @@ a {
 }
 
 a:visited {
-  /* color: purple; */
   text-decoration: none;
 }
 
 a:hover,
 a:focus,
 a:active {
-  /* color: midnightblue; */
   text-decoration: none;
 }
 
@@ -911,8 +885,6 @@ a:active {
   letter-spacing: 0.12em;
   clear: left;
 }
-
-.main-navigation .menu-main-menu-container {}
 
 .home .main-navigation {
   background-color: transparent;
@@ -1173,19 +1145,6 @@ ul.menu li {
   padding: 0 0 2em 0;
 }
 
-@media screen and (min-width: 600px) {
-  .site-content {
-    /* padding: 2em; */
-  }
-}
-
-@media screen and (min-width: 1150px) {
-  .site-content {
-    /* padding-left: 8em;
-    padding-right: 8em; */
-  }
-}
-
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -1193,7 +1152,6 @@ ul.menu li {
 .site-header {
   position: relative;
   padding: 0;
-  /* z-index: -1; */
 }
 
 .home .site-header {
@@ -1288,8 +1246,6 @@ ul.menu li {
 
   .site-header .social-menu {
     padding: 0;
-    /* display: block; */
-    /* width: 20%; */
     display: flex;
     flex: 1;
     justify-content: flex-end;
@@ -1300,39 +1256,22 @@ ul.menu li {
   }
 
   .site-header .site-branding {
-    /* width: 20%; */
     flex: 1;
   }
 
   .site-header .main-navigation {
-    /* width: 60%; */
     display: flex;
-    /* flex-basis: 100%; */
     flex: 3;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
-    /* padding-left: 1.2em; */
     background-color: #472979;
     height: 90px;
   }
 }
 
 #page-title {
-  /* position: relative; */
-  /* width: 100%; */
   color: #472979;
-  /* padding: 1em 1.4em; */
   text-transform: uppercase;
-  /* font-size: 1.2em; */
-  /* font-weight: 300; */
-  /* margin-top: -2.6em; */
-}
-
-@media screen and (min-width: 600px) {
-  #page-title {
-    /* font-size: 1.4em; */
-  }
 }
 
 /*--------------------------------------------------------------
@@ -1396,14 +1335,7 @@ h3.entry-title a {
   margin: 0 0 1.5em;
 }
 
-/* @media screen and (min-width: 1050px) {
-  .home .site-content {
-    background-position: center top;
-  }
-} */
-
 .home .site-content .entry-content {
-  /* height: 650px; */
   text-align: center;
   margin: 1em auto;
   max-width: 975px;
@@ -1411,7 +1343,6 @@ h3.entry-title a {
 
 .home .site-content .entry-content p {
   margin-bottom: 1.2em;
-  /* max-width: 900px; */
   font-size: 1.2em;
   line-height: 2em;
 }
@@ -1450,7 +1381,6 @@ footer .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3.5em;
-  /* justify-content: space-between; */
 }
 
 @media screen and (min-width: 600px) {
@@ -1460,16 +1390,8 @@ footer .container {
   }
 }
 
-#kstate-logo-holder {
-  /* width: 50%; */
-}
-
 #kstate-logo {
   width: 14em;
-}
-
-footer .social-menu {
-  /* width: 50%; */
 }
 
 footer .social-menu ul a {
@@ -1622,8 +1544,8 @@ object {
 }
 
 /*--------------------------------------------------------------
-      ## Home page
-      --------------------------------------------------------------*/
+## Home page
+--------------------------------------------------------------*/
 
 #research-areas {
   position: relative;
@@ -1631,7 +1553,6 @@ object {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  /* padding: 0 1.4em; */
 }
 
 #research-areas .research-box {
@@ -1644,19 +1565,13 @@ object {
   text-transform: uppercase;
   font-size: .75em;
   margin: 2px;
-  /* min-width: 200px; */
 }
 
 @media screen and (min-width: 600px) {
-  #research-areas {
-    /* margin-top: -4.6em; */
-  }
-
   #research-areas .research-box {
     height: 130px;
     width: 195px;
     color: white;
-    /* padding-bottom: 0; */
   }
 }
 
@@ -1721,47 +1636,12 @@ object {
 
 .home #news {
   position: relative;
-  /* padding-top: 33%; */
   margin-top: -13%;
-  /* background-image: none; */
   background-position: center top;
-  /* background-size: 0%; */
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
-
-/* @media screen and (min-width: 900px) {
-          .home .site-content {
-            background-size: 100%;
-            background-position: center top;
-        
-          }
-        } */
-
-/* @media screen and (min-width: 900px) {
-          #news {
-            padding-top: 15%;
-          }
-        }
-        
-        @media screen and (min-width: 950px) {
-          #news {
-            padding-top: 20%;
-          }
-        }
-        
-        @media screen and (min-width: 1000px) {
-          #news {
-            padding-top: 23%;
-          }
-        }
-        
-        @media screen and (min-width: 1150px) {
-          #news {
-            padding-top: 35%;
-          }
-        } */
 
 #news-container,
 #recent-publications-container {
@@ -1774,7 +1654,6 @@ object {
 }
 
 .news-item {
-  /* height: 400px; */
   color: white;
   text-transform: uppercase;
   display: flex;
@@ -1832,8 +1711,8 @@ object {
 }
 
 /*--------------------------------------------------------------
-          ## Sponsors
-          --------------------------------------------------------------*/
+## Sponsors
+--------------------------------------------------------------*/
 
 #sponsors {
   width: 100%;
@@ -1845,8 +1724,6 @@ object {
 
 @media screen and (min-width: 600px) {
   #sponsors .container {
-    /* padding-left: 34px;
-          padding-right: 34px; */
     flex-direction: column;
   }
 }
@@ -1874,8 +1751,8 @@ object {
 }
 
 /*--------------------------------------------------------------
-    ## People, News
-    --------------------------------------------------------------*/
+## People, News
+--------------------------------------------------------------*/
 
 #people article,
 #news article {
@@ -1913,12 +1790,4 @@ object {
 #people p,
 #news p {
   margin: 0;
-}
-
-/*--------------------------------------------------------------
-      ## Vue.js
-      --------------------------------------------------------------*/
-
-[v-cloak] {
-  display: none !important;
 }
