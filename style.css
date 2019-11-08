@@ -914,7 +914,7 @@ ul.menu li {
     position: relative;
   }
 
-  .main-navigation .menu-main-menu-container > ul > li.current-menu-item a:before, .main-navigation ul li.current-menu-parent > a:before {
+  .main-navigation .menu-main-menu-container > ul > li.current-menu-item > a:before, .main-navigation ul li.current-menu-parent > a:before {
     content: "";
     position: absolute;
     width: 50%;
