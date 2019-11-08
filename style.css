@@ -683,20 +683,11 @@ img {
 figure {
   margin: 0 0 30px 0;
   /* Extra wide images within figure tags don't overflow the content area. */
-  background-color: #472979;
   display: inline-block;
 }
 
 .wp-block-image {
   margin: 0 0 30px 0;
-}
-
-.wp-block-image figcaption {
-  background-color: #472979;
-  color: #ffffff;
-  margin: 0;
-  vertical-align: top;
-  padding-bottom: 10px;
 }
 
 table {
@@ -743,13 +734,14 @@ input[type="submit"]:focus {
   border: none;
   box-shadow: none;
   cursor: pointer;
-  display: inline-block;
+  display: table;
   margin: 0;
   padding: 12px 24px;
   text-align: center;
   text-decoration: none;
   overflow-wrap: break-word;
   color: #ffffff;
+  clear: both;
 }
 
 .wp-block-button__link,
@@ -1485,7 +1477,10 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
+  background-color: #472979;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px 0;
 }
 
 .wp-caption-text {
