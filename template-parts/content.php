@@ -81,7 +81,7 @@ $phone = get_field('phone');
 
 			the_excerpt();
 
-			if ($post_type == 'people') {
+			if ($post_type == 'team') {
 				echo '<p>' . $bio . '</p>';
 				echo $office_location;
 				echo '<br><a href="mailto:' . $email . '" target="_blank">' . $email . '</a>';
