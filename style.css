@@ -886,10 +886,6 @@ a:active {
   clear: left;
 }
 
-.home .main-navigation {
-  background-color: transparent;
-}
-
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -1266,6 +1262,10 @@ ul.menu li {
     justify-content: center;
     background-color: #472979;
     height: 90px;
+  }
+
+  .home .main-navigation {
+    background-color: transparent;
   }
 }
 
