@@ -1022,6 +1022,7 @@ a:hover, a:active {
     padding-top: 75px;
     font-size: 100%;
   }
+
   .site-header .social-menu {
     padding: 0;
     /* display: block; */
@@ -1030,13 +1031,16 @@ a:hover, a:active {
     flex: 1;
     justify-content: flex-end;
   }
+
   .menu-social-container {
     margin-top: auto;
   }
+
   .site-header .site-branding {
     /* width: 20%; */
     flex: 1;
   }
+
   .site-header .main-navigation {
     /* width: 60%; */
     display: flex;
@@ -1090,7 +1094,7 @@ Header Menu
 }
 
 .main-navigation ul ul li {
-  padding-left: 1em;
+  /* padding-left: 1em; */
 }
 
 .main-navigation ul ul li:hover>ul, .main-navigation ul ul li.focus>ul {
@@ -1124,11 +1128,11 @@ Header Menu
 }
 
 .main-navigation .menu-item-has-children, .main-navigation .page-item-has-children {
-  min-width: 218px;
+  /* min-width: 218px; */
 }
 
 .main-navigation .menu-item-has-children>a, .main-navigation .page_item_has_children>a {
-  padding-right: 2em;
+  /* padding-right: 2em; */
 }
 
 /* button.dropdown-toggle {
@@ -1163,7 +1167,7 @@ Header Menu
 
 @media screen and (min-width: 900px) {
   .main-navigation .menu-item-has-children>a, .main-navigation .page_item_has_children>a {
-    padding-right: 2em;
+    /* padding-right: 2em; */
   }
   .main-navigation ul {
     display: block;
@@ -1181,6 +1185,9 @@ Header Menu
     top: 100%;
     left: -999em;
     z-index: 99999;
+    height: auto;
+    background-color: #ffffff;
+    padding-top: 20px;
   }
   
   .main-navigation ul ul ul {
@@ -1206,14 +1213,16 @@ Header Menu
     padding: 0 1.2em 1.4em;
     margin-top: auto;
   }
-  .main-navigation ul li.current-menu-item {
+  .main-navigation ul li.current-menu-item, .main-navigation ul li.current-menu-parent {
     background-color: #ffffff;
   }
-  .main-navigation ul li.current-menu-item a {
+
+  .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a {
     color: #404040;
     position: relative;
   }
-  .main-navigation ul li.current-menu-item a:before {
+
+  .main-navigation .menu-main-menu-container > ul > li.current-menu-item a:before, .main-navigation ul li.current-menu-parent > a:before {
     content: "";
     position: absolute;
     width: 50%;
@@ -1223,12 +1232,9 @@ Header Menu
     border-bottom: 1px solid #FDC345;
   }
 
-
-
-
-
-
-  
+  .sub-menu a {
+    color: #404040;
+  }  
 }
 
 @media screen and (min-width: 1150px) {
