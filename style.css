@@ -857,7 +857,7 @@ a:active {
   background-color: #472979;
 }
 
-.date {
+.publication-date {
   padding: .4em .7em;
 }
 
@@ -1609,7 +1609,7 @@ object {
   margin-bottom: 15px;
 }
 
-.recent-publication-header .date {
+.recent-publication-header .publication-date {
   align-self: flex-end;
 }
 
@@ -1780,4 +1780,21 @@ object {
 #people p,
 #news p {
   margin: 0;
+}
+
+/*--------------------------------------------------------------
+## Annual Archive Widget
+--------------------------------------------------------------*/
+.Annual_Archive_Widget ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.Annual_Archive_Widget li {
+  list-style: none;
+  padding-bottom: 0.7em;
+}
+
+.Annual_Archive_Widget li a {
+  color: #2D2C2C;
 }

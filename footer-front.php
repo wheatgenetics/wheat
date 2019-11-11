@@ -91,7 +91,7 @@
 					echo "<div class='recent-publication'>";
 					echo "<div class='recent-publication-header'>";
 					echo "<img class='pubicon' src='" . esc_url( home_url( '/' ) ) . "wp-content/themes/wheat/images/PubIcon.png' />";
-					echo "<span class='button date purple-background'>" . $publication_date . "</span>";
+					echo "<span class='button publication-date purple-background'>" . $publication_date . "</span>";
 					echo "</div>";
 					echo "<p>" . $title . "</p>";
 					echo "<div class='journal'>";
