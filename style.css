@@ -637,7 +637,7 @@ aside#secondary {
 #primary {
   display: flex;
   flex-direction: column;
-  flex: 4;
+  flex: 6;
 }
 
 hr {
@@ -1171,15 +1171,15 @@ ul.menu li {
 
 .site-header .site-branding .custom-logo-link img {
   display: block;
-  height: 85px;
-  width: auto;
+  height: auto;
+  width: 180px;
 }
 
 .site-header .site-branding .site-branding__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 85px;
+  /* height: 85px; */
 }
 
 .site-header .site-branding .site-branding__text .site-title {
@@ -1240,11 +1240,12 @@ ul.menu li {
 
   .site-header .site-branding {
     flex: 1;
+    min-width: 170px;
   }
 
   .site-header .main-navigation {
     display: flex;
-    flex: 3;
+    flex: 5;
     display: flex;
     justify-content: center;
     background-color: #472979;
