@@ -77,18 +77,19 @@
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
 					$publication_date = get_the_date();
 					
-					// if (get_field('publication_date', $post_id)) {
-					// 	$publication_date = get_field('publication_date', $post_id);
-					// } else {
-					// 	$publication_date = '';
-					// }
+					if (get_field('link', $post_id)) {
+						$publication_link = get_field('link', $post_id);
+					} else {
+						$publication_link = '#';
+					}
 
 					if (get_field('journal', $post_id)) {
 						$journal = get_field('journal', $post_id);
 					} else {
 						$journal = '';
 					}
-					echo "<div class='recent-publication'>";
+					
+					echo "<a href='" . $publication_link . "' class='recent-publication' target='_blank'>";
 					echo "<div class='recent-publication-header'>";
 					echo "<img class='pubicon' src='" . esc_url( home_url( '/' ) ) . "wp-content/themes/wheat/images/PubIcon.png' />";
 					echo "<span class='button publication-date purple-background'>" . $publication_date . "</span>";
@@ -97,7 +98,7 @@
 					echo "<div class='journal'>";
 					echo $journal;
 					echo "</div>";
-					echo "</div>";
+					echo "</a>";
 				}
 
 				wp_reset_query();

@@ -1643,6 +1643,7 @@ object {
 .news-item,
 .recent-publication {
   margin: 0 10px 20px;
+  color: #2D2C2C;
 }
 
 .news-item {
