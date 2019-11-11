@@ -298,7 +298,9 @@ add_filter('acf/update_value/name=projects_research_areas', 'bidirectional_acf_u
 
 
 
-
+/**
+ * Add a class of current-archive to the current archive's link when on that page.
+ */ 
 function example_get_archives_link($link_html) {
     if (is_day() || is_month() || is_year()) {
         if (is_day()) {
