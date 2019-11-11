@@ -41,13 +41,13 @@
 					$title = get_the_title();
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
 
-					echo "<div class='news-item' style='background:linear-gradient(transparent, #020202), url(" . $image[0] . ") no-repeat center top;background-size: cover;'>";
+					echo "<a href='" . get_permalink() . "'class='news-item' style='background:linear-gradient(transparent, #020202), url(" . $image[0] . ") no-repeat center top;background-size: cover;'>";
 					echo "<div class='news-item-content-holder'>";
 					echo "<p>" . $title . "</p>";
-					echo "<hr class='dotted'>";
-					echo "<p><a class='button purple-background'>Read More</a></p>";
+					echo "<hr>";
+					echo "<p><span class='button purple-background'>Read More</span></p>";
 					echo "</div>";
-					echo "</div>";
+					echo "</a>";
 				}
 
 				wp_reset_query();
