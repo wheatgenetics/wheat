@@ -1413,6 +1413,26 @@ footer #contact {
   max-width: 100%;
 }
 
+.widget ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.widget li {
+  list-style: none;
+  margin-bottom: 0.7em;
+  border-bottom: 1px solid transparent;
+}
+
+.widget li.current-archive {
+    border-bottom: 1px solid #FDC345;
+}
+
+.widget li a {
+  color: #2D2C2C;
+  text-transform: uppercase;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -1783,26 +1803,4 @@ object {
 #people p,
 #news p {
   margin: 0;
-}
-
-/*--------------------------------------------------------------
-## Annual Archive Widget
---------------------------------------------------------------*/
-.Annual_Archive_Widget ul {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.Annual_Archive_Widget li {
-  list-style: none;
-  margin-bottom: 0.7em;
-  border-bottom: 1px solid transparent;
-}
-
-.Annual_Archive_Widget li.current-archive {
-    border-bottom: 1px solid #FDC345;
-}
-
-.Annual_Archive_Widget li a {
-  color: #2D2C2C;
 }
