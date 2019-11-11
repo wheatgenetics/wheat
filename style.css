@@ -1394,10 +1394,11 @@ footer #contact {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-
 .widget {
   margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets. */
+  padding-right: 30px;
+
 }
 
 .widget h2.widget-title {
@@ -1792,7 +1793,12 @@ object {
 
 .Annual_Archive_Widget li {
   list-style: none;
-  padding-bottom: 0.7em;
+  margin-bottom: 0.7em;
+  border-bottom: 1px solid transparent;
+}
+
+.Annual_Archive_Widget li:hover {
+  border-bottom: 1px solid #FDC345;
 }
 
 .Annual_Archive_Widget li a {
