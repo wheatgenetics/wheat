@@ -1798,8 +1798,8 @@ object {
   border-bottom: 1px solid transparent;
 }
 
-.Annual_Archive_Widget li:hover {
-  border-bottom: 1px solid #FDC345;
+.Annual_Archive_Widget li.current-archive {
+    border-bottom: 1px solid #FDC345;
 }
 
 .Annual_Archive_Widget li a {
