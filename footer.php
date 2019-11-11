@@ -28,7 +28,13 @@
 					$query->the_post();
 					$post_id = get_the_ID();
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
-					echo "<img src='" . $image[0] . "'/>";
+					
+					if (get_field('sponsor_website', $post_id)) {
+						$sponsor_website = get_field('sponsor_website', $post_id);
+						echo "<a href='" . $sponsor_website . "' target='_blank'><img src='" . $image[0] . "'/></a>";
+					} else {
+						echo "<img src='" . $image[0] . "'/>";
+					}
 				}
 
 				wp_reset_query();
