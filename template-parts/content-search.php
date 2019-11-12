@@ -11,7 +11,19 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php
+		$post_type = get_post_type();
+		$post_type = ucfirst(str_replace('_', ' ', $post_type));
+
+		echo $post_type;
+		
+		if ($post_type == 'publications') {
+			$link = get_field('link');
+			the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark" target="_blank">', $link ), '</a></h3>' );
+		} else {
+			the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
+		}
+		?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -22,8 +34,6 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php wheat_post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
