@@ -1676,6 +1676,10 @@ object {
   background-size: cover;
 }
 
+.recent-publication {
+  display: inline-block;
+}
+
 @media screen and (min-width: 600px) {
 
   #news-container,
