@@ -1278,9 +1278,6 @@ ul.menu li {
 article {
   border-bottom: .1em dotted #dbd9d1;
   padding: 20px 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -1778,6 +1775,15 @@ object {
   padding-bottom: 30px;
   margin-bottom: 30px;
   border-bottom: .1em dotted #dbd9d1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.post-type-archive-news article, .post-type-archive-team article, .single-news article, .single-team article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #people article img,
