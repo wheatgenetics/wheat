@@ -48,5 +48,4 @@ get_header();
 	</div>
 
 <?php
-get_sidebar();
 get_footer();
