@@ -7,6 +7,6 @@
 ( function( $ ) {
   $(document).ready(function(){
     var title = $('h3.entry-title').html();
-    $(`a:contains(${title})`).parent().css('border-bottom', '1px solid #FDC345');
+    $(`.widget a:contains(${title})`).parent().css('border-bottom', '1px solid #FDC345');
   });
 } )( jQuery );
