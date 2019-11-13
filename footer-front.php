@@ -26,31 +26,31 @@
 
 		<div id="news">
 			<h3>NEWS</h3>
-			
+			<?php echo do_shortcode('[recent_post_carousel show_author="false" show_date="false" autoplay="false" media_size="full" dots="false" slides_to_show="3" slides_to_scroll="1" post_type="news"]'); ?>
 			<div id="news-container">
 				<?php
-				$query = new WP_Query(array(
-					'post_type' => 'news',
-					'post_status' => 'publish',
-					'posts_per_page' => 3
-				));
+				// $query = new WP_Query(array(
+				// 	'post_type' => 'news',
+				// 	'post_status' => 'publish',
+				// 	'posts_per_page' => 3
+				// ));
 
-				while ($query->have_posts()) {
-					$query->the_post();
-					$post_id = get_the_ID();
-					$title = get_the_title();
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+				// while ($query->have_posts()) {
+				// 	$query->the_post();
+				// 	$post_id = get_the_ID();
+				// 	$title = get_the_title();
+				// 	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
 
-					echo "<a href='" . get_permalink() . "'class='news-item' style='background:linear-gradient(transparent, #020202), url(" . $image[0] . ") no-repeat center top;background-size: cover;'>";
-					echo "<div class='news-item-content-holder'>";
-					echo "<p>" . $title . "</p>";
-					echo "<hr>";
-					echo "<p><span class='button purple-background'>Read More</span></p>";
-					echo "</div>";
-					echo "</a>";
-				}
+				// 	echo "<a href='" . get_permalink() . "'class='news-item' style='background:linear-gradient(transparent, #020202), url(" . $image[0] . ") no-repeat center top;background-size: cover;'>";
+				// 	echo "<div class='news-item-content-holder'>";
+				// 	echo "<p>" . $title . "</p>";
+				// 	echo "<hr>";
+				// 	echo "<p><span class='button purple-background'>Read More</span></p>";
+				// 	echo "</div>";
+				// 	echo "</a>";
+				// }
 
-				wp_reset_query();
+				// wp_reset_query();
 				?>
 			</div>
 

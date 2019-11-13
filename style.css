@@ -354,25 +354,25 @@ textarea {
   height: auto;
 }
 
-  /**
+/**
   * 1. Correct the odd appearance in Chrome and Safari.
   * 2. Correct the outline style in Safari.
   */
 
-  [type="search"] {
-    -webkit-appearance: textfield;
-    /* 1 */
-    outline-offset: -2px;
-    /* 2 */
-  }
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
 
-  /**
+/**
   * Remove the inner padding in Chrome and Safari on macOS.
   */
 
-  [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -809,45 +809,45 @@ textarea {
 }
 
 input {
-	outline: none;
+  outline: none;
 }
 
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
-	display: none; 
+  display: none;
 }
 
 input[type=search] {
   box-sizing: content-box;
-	font-family: inherit;
-	font-size: 100%;
+  font-family: inherit;
+  font-size: 100%;
   background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
-	border: none;
-	padding: 9px 10px 9px 32px;
-	width: 55px;
-	border-radius: 10em;
-	transition: all .5s;
+  border: none;
+  padding: 9px 10px 9px 32px;
+  width: 55px;
+  border-radius: 10em;
+  transition: all .5s;
   width: 15px;
   height: 17px;
-	padding-left: 10px;
-	color: transparent;
-	cursor: pointer;
+  padding-left: 10px;
+  color: transparent;
+  cursor: pointer;
 }
 
 input[type=search]:hover {
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 input[type=search]:focus {
   background-color: #ffffff;
-	width: 80px;
-	padding-left: 32px;
-	color: #000000;
-	cursor: auto;
+  width: 80px;
+  padding-left: 32px;
+  color: #000000;
+  cursor: auto;
 }
 
 input::placeholder {
-	color: transparent;
+  color: transparent;
 }
 
 /*--------------------------------------------------------------
@@ -1826,7 +1826,10 @@ object {
   flex-wrap: wrap;
 }
 
-.post-type-archive-news article, .post-type-archive-team article, .single-news article, .single-team article {
+.post-type-archive-news article,
+.post-type-archive-team article,
+.single-news article,
+.single-team article {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1860,4 +1863,109 @@ object {
 #people p,
 #news p {
   margin: 0;
+}
+
+/* Recent Post Slider */
+.wppsac-slick-carousel-wrp .post-carousel {
+  position: relative;
+  max-height: 390px;
+}
+
+.recent-post-carousel .post-image-bg a {
+  position: relative;
+  display: inline-block;
+}
+
+.recent-post-carousel .post-image-bg a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: linear-gradient(transparent, #020202), no-repeat center top;
+  background-size: cover;
+}
+
+.wp-sub-content {
+  display: none
+}
+
+/* 
+.wppsac-slick-carousel-wrp .post-carousel img {
+  z-index:-10;
+} */
+
+.wppsac-slick-carousel-wrp .post-content-position {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.wppsac-slick-carousel-wrp .post-content-position .wp-post-title {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.wppsac-slick-carousel-wrp .post-content-position .wp-post-title:before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 1px;
+  bottom: 0;
+  left: 45%;
+  border-bottom: 4px dotted #ffffff;
+}
+
+.wppsac-slick-carousel-wrp .post-content-position .wp-post-title a {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: raleway, sans-serif;
+  font-size: 1rem;
+  line-height: .1em;
+  font-weight: 400;
+}
+
+.recent-post-carousel.design-1 a.readmorebtn {
+  color: #fff;
+  background-color: #472979;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px 0 0 0;
+  text-align: center;
+  overflow-wrap: break-word;
+  border-radius: 0;
+  font-size: .7em;
+  padding: .9em 2.3em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.recent-post-carousel.design-1 a.readmorebtn:hover, .recent-post-carousel.design-1 a.readmorebtn:focus {
+  background-color: #472979;
+}
+
+.recent-post-carousel.design-1 .slick-arrow {
+  border-radius: 50px !important;
+  width: 45px;
+  background-color: #472979 !important;
+}
+
+.recent-post-carousel.design-1 .slick-arrow:hover, .recent-post-carousel.design-1 .slick-arrow:focus {
+  background-color: #472979 !important;
+}
+
+@media screen and (min-width: 1150px) {
+  .recent-post-carousel.design-1 .slick-prev {
+    left: -65px !important;
+  }
+
+  .recent-post-carousel.design-1 .slick-next {
+    right: -65px !important;
+  }
 }
