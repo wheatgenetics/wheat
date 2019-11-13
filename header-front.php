@@ -78,10 +78,12 @@ if (!empty($backgroundImage)) {
 			</nav><!-- #site-navigation -->
 
 			<nav class="social-menu">
-				<?php
+				<?php				
 				wp_nav_menu( array(
 					'theme_location' => 'social'
 				) );
+
+				get_search_form();
 				?>
 			</nav>
 

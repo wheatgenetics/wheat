@@ -354,25 +354,25 @@ textarea {
   height: auto;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
+  /**
+  * 1. Correct the odd appearance in Chrome and Safari.
+  * 2. Correct the outline style in Safari.
+  */
 
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
+  [type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+  }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
+  /**
+  * Remove the inner padding in Chrome and Safari on macOS.
+  */
 
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -760,7 +760,6 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"],
 input[type="number"],
 input[type="tel"],
 input[type="range"],
@@ -782,7 +781,6 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
-input[type="search"]:focus,
 input[type="number"]:focus,
 input[type="tel"]:focus,
 input[type="range"]:focus,
@@ -803,6 +801,84 @@ select {
 
 textarea {
   width: 100%;
+}
+
+
+
+
+/* Exapandable search */
+.expand-search {
+  margin: 2.5em 1em 0 0;
+}
+
+input {
+	outline: none;
+}
+
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: none;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	background-color: #fff;
+	/* border-color: #66CC75; */
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+.expand-search input[type=search] {
+  width: 15px;
+  height: 17px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+.expand-search input[type=search]:hover {
+	background-color: #fff;
+}
+.expand-search input[type=search]:focus {
+	width: 80px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+.expand-search input:-moz-placeholder {
+	color: transparent;
+}
+.expand-search input::-webkit-input-placeholder {
+	color: transparent;
 }
 
 /*--------------------------------------------------------------
@@ -1206,6 +1282,7 @@ ul.menu li {
   display: none;
   background-color: #472979;
   height: 90px;
+  max-width: 170px;
 }
 
 .home .site-header .social-menu {
