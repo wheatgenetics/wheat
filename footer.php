@@ -62,10 +62,6 @@
 				<br>4702 Throckmorton PSC
 				<br>1712 Claflin Road
 				<br>Manhattan, KS 66506
-				<br>
-				<br>Email: <a href="mailto:jpoland@ksu.edu">jpoland@ksu.edu</a>
-				<br>Phone: <a href="tel:1-785-532-2709">+1-785-532-2709</a>
-				<br>Fax: +1-785-532-5692
 			</div>
 		</div>
 	</footer><!-- #colophon -->
