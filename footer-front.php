@@ -17,7 +17,7 @@
 		<?php
 		$backgroundInfographic = get_field('background_infographic');
 
-		if ( !empty($backgroundInfographic) ) {
+		if (!empty($backgroundInfographic)) {
 		?>
 			<div id="infographic">
     	        <img src="<?php echo $backgroundInfographic['url']; ?>" />
@@ -29,7 +29,7 @@
 
 		query_posts($args);
 
-		if ( have_posts() ) {
+		if (have_posts()) {
 		?>
 			<div id="news">
 				<h3>NEWS</h3>
@@ -44,23 +44,19 @@
 		<?php } ?>
 
 		<?php
-		$args = array('post_type'=>array('publications'));
+		$query = new WP_Query(array(
+			'post_type' => 'publications',
+			'post_status' => 'publish',
+			'posts_per_page' => 3
+		));
 
-		query_posts($args);
-
-		if ( have_posts() ) {
+		if (have_posts()) {
 		?>
 			<div id="recent-publications">
 				<h3>RECENT PUBLICATIONS</h3>
 
 				<div id="recent-publications-container">
 					<?php
-					$query = new WP_Query(array(
-						'post_type' => 'publications',
-						'post_status' => 'publish',
-						'posts_per_page' => 3
-					));
-
 					while ($query->have_posts()) {
 						$query->the_post();
 						$post_id = get_the_ID();
@@ -104,23 +100,21 @@
 	<?php } ?>
 
 	<?php
-	$args = array('post_type'=>array('sponsors'));
+	$query = new WP_Query(array(
+		'post_type' => 'sponsors',
+		'post_status' => 'publish',
+		'posts_per_page' => -1
+	));
 
 	query_posts($args);
 
-	if ( have_posts() ) {
+	if (have_posts()) {
 	?>
 		<div id="sponsors">
 			<div class="container">
 				<p>SPONSORS</p>
 				<div id="sponsors-img-container">
 					<?php
-					$query = new WP_Query(array(
-						'post_type' => 'sponsors',
-						'post_status' => 'publish',
-						'posts_per_page' => -1
-					));
-
 					while ($query->have_posts()) {
 						$query->the_post();
 						$post_id = get_the_ID();
