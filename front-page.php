@@ -9,25 +9,28 @@
 
 get_header('front');
 ?>
-	<div id="research-areas">
-		<?php 
-		$args = array(
-			'post_type'=> 'research_areas'
-		);              
+	<?php 
+	$args = array(
+		'post_type'=> 'research_areas'
+	);              
 
-		$researchAreas = new WP_Query($args);
+	$researchAreas = new WP_Query($args);
 
-		if ($researchAreas->have_posts()) {
-			while ($researchAreas->have_posts()) {
-				$researchAreas->the_post();
-				echo '<a class="research-box">';
-				echo '<p><i style="font-size: 3em;" class="fas fa-dna"></i></p>';
-				the_title();
-				echo '</a>';
-			}
+	if ($researchAreas->have_posts()) {
+		echo '<div id="research-areas">';
+		
+		while ($researchAreas->have_posts()) {
+			$researchAreas->the_post();
+			echo '<a class="research-box">';
+			echo '<p><i style="font-size: 3em;" class="fas fa-dna"></i></p>';
+			the_title();
+			echo '</a>';
 		}
-		?>
-	</div>
+
+		echo '</div>';
+	}
+	?>
+	
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
