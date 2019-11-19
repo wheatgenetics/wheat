@@ -50,7 +50,7 @@
 			'posts_per_page' => 3
 		));
 
-		if (have_posts()) {
+		if ($query->have_posts()) {
 		?>
 			<div id="recent-publications">
 				<h3>RECENT PUBLICATIONS</h3>
@@ -106,7 +106,7 @@
 		'posts_per_page' => -1
 	));
 
-	if (have_posts()) {
+	if ($query->have_posts()) {
 	?>
 		<div id="sponsors">
 			<div class="container">

@@ -20,7 +20,7 @@
 		'posts_per_page' => -1
 	));
 
-	if (have_posts()) {
+	if ($query->have_posts()) {
 	?>
 		<div id="sponsors">
 			<div class="container">
