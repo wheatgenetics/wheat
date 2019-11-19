@@ -24,122 +24,123 @@
 			</div>
 		<?php } ?>
 
-		<div id="news">
-			<h3>NEWS</h3>
-			<?php echo do_shortcode('[recent_post_carousel show_author="false" show_date="false" autoplay="false" media_size="full" dots="false" slides_to_show="3" slides_to_scroll="1" post_type="news"]'); ?>
-			<div id="news-container">
-				<?php
-				// $query = new WP_Query(array(
-				// 	'post_type' => 'news',
-				// 	'post_status' => 'publish',
-				// 	'posts_per_page' => 3
-				// ));
+		<?php
+		$args = array('post_type'=>array('news'));
 
-				// while ($query->have_posts()) {
-				// 	$query->the_post();
-				// 	$post_id = get_the_ID();
-				// 	$title = get_the_title();
-				// 	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+		query_posts($args);
 
-				// 	echo "<a href='" . get_permalink() . "'class='news-item' style='background:linear-gradient(transparent, #020202), url(" . $image[0] . ") no-repeat center top;background-size: cover;'>";
-				// 	echo "<div class='news-item-content-holder'>";
-				// 	echo "<p>" . $title . "</p>";
-				// 	echo "<hr>";
-				// 	echo "<p><span class='button purple-background'>Read More</span></p>";
-				// 	echo "</div>";
-				// 	echo "</a>";
-				// }
+		if ( have_posts() ) {
+		?>
+			<div id="news">
+				<h3>NEWS</h3>
+				<?php echo do_shortcode('[recent_post_carousel show_author="false" show_date="false" autoplay="false" media_size="full" dots="false" slides_to_show="3" slides_to_scroll="1" post_type="news"]'); ?>
+				<div id="news-container">
+				</div>
 
-				// wp_reset_query();
-				?>
+				<div class="view-all-link-container">
+					<a class="button" href="<?php echo esc_url( home_url( '/news' ) ); ?>">All news</a>
+				</div>
 			</div>
+		<?php } ?>
 
-			<div class="view-all-link-container">
-				<a class="button" href="<?php echo esc_url( home_url( '/news' ) ); ?>">All news</a>
-			</div>
-		</div>
+		<?php
+		$args = array('post_type'=>array('publications'));
 
-		<div id="recent-publications">
-			<h3>RECENT PUBLICATIONS</h3>
+		query_posts($args);
 
-			<div id="recent-publications-container">
-				<?php
-				$query = new WP_Query(array(
-					'post_type' => 'publications',
-					'post_status' => 'publish',
-					'posts_per_page' => 3
-				));
+		if ( have_posts() ) {
+		?>
+			<div id="recent-publications">
+				<h3>RECENT PUBLICATIONS</h3>
 
-				while ($query->have_posts()) {
-					$query->the_post();
-					$post_id = get_the_ID();
-					$title = get_the_title();
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
-					$publication_date = get_the_date();
-					
-					if (get_field('link', $post_id)) {
-						$publication_link = get_field('link', $post_id);
-					} else {
-						$publication_link = '#';
+				<div id="recent-publications-container">
+					<?php
+					$query = new WP_Query(array(
+						'post_type' => 'publications',
+						'post_status' => 'publish',
+						'posts_per_page' => 3
+					));
+
+					while ($query->have_posts()) {
+						$query->the_post();
+						$post_id = get_the_ID();
+						$title = get_the_title();
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+						$publication_date = get_the_date();
+						
+						if (get_field('link', $post_id)) {
+							$publication_link = get_field('link', $post_id);
+						} else {
+							$publication_link = '#';
+						}
+
+						if (get_field('journal', $post_id)) {
+							$journal = get_field('journal', $post_id);
+						} else {
+							$journal = '';
+						}
+						
+						echo "<a href='" . $publication_link . "' class='recent-publication' target='_blank'>";
+						echo "<div class='recent-publication-header'>";
+						echo "<img class='pubicon' src='" . esc_url( home_url( '/' ) ) . "wp-content/themes/wheat/images/PubIcon.png' />";
+						echo "<span class='button publication-date purple-background'>" . $publication_date . "</span>";
+						echo "</div>";
+						echo "<p>" . $title . "</p>";
+						echo "<div class='journal'>";
+						echo $journal;
+						echo "</div>";
+						echo "</a>";
 					}
 
-					if (get_field('journal', $post_id)) {
-						$journal = get_field('journal', $post_id);
-					} else {
-						$journal = '';
-					}
-					
-					echo "<a href='" . $publication_link . "' class='recent-publication' target='_blank'>";
-					echo "<div class='recent-publication-header'>";
-					echo "<img class='pubicon' src='" . esc_url( home_url( '/' ) ) . "wp-content/themes/wheat/images/PubIcon.png' />";
-					echo "<span class='button publication-date purple-background'>" . $publication_date . "</span>";
-					echo "</div>";
-					echo "<p>" . $title . "</p>";
-					echo "<div class='journal'>";
-					echo $journal;
-					echo "</div>";
-					echo "</a>";
-				}
+					wp_reset_query();
+					?>
+				</div>
 
-				wp_reset_query();
-				?>
+				<div class="view-all-link-container">
+					<a class="button" href="<?php echo esc_url( home_url( '/publications' ) ); ?>">All publications</a>
+				</div>
 			</div>
+		<?php } ?>
+	<?php } ?>
 
-			<div class="view-all-link-container">
-				<a class="button" href="<?php echo esc_url( home_url( '/publications' ) ); ?>">All publications</a>
+	<?php
+	$args = array('post_type'=>array('sponsors'));
+
+	query_posts($args);
+
+	if ( have_posts() ) {
+	?>
+		<div id="sponsors">
+			<div class="container">
+				<p>SPONSORS</p>
+				<div id="sponsors-img-container">
+					<?php
+					$query = new WP_Query(array(
+						'post_type' => 'sponsors',
+						'post_status' => 'publish',
+						'posts_per_page' => -1
+					));
+
+					while ($query->have_posts()) {
+						$query->the_post();
+						$post_id = get_the_ID();
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+						
+						if (get_field('sponsor_website', $post_id)) {
+							$sponsor_website = get_field('sponsor_website', $post_id);
+							echo "<a href='" . $sponsor_website . "' target='_blank'><img src='" . $image[0] . "'/></a>";
+						} else {
+							echo "<img src='" . $image[0] . "'/>";
+						}
+					}
+
+					wp_reset_query();
+					?>
+				</div>
 			</div>
 		</div>
 	<?php } ?>
 
-	<div id="sponsors">
-		<div class="container">
-			<p>SPONSORS</p>
-			<div id="sponsors-img-container">
-				<?php
-				$query = new WP_Query(array(
-					'post_type' => 'sponsors',
-					'post_status' => 'publish',
-					'posts_per_page' => -1
-				));
-
-				while ($query->have_posts()) {
-					$query->the_post();
-					$post_id = get_the_ID();
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
-					
-					if (get_field('sponsor_website', $post_id)) {
-						$sponsor_website = get_field('sponsor_website', $post_id);
-						echo "<a href='" . $sponsor_website . "' target='_blank'><img src='" . $image[0] . "'/></a>";
-					} else {
-						echo "<img src='" . $image[0] . "'/>";
-					}
-				}
-
-				wp_reset_query();
-				?>
-			</div>
-		</div>
-	</div>
 			
 	<footer id="colophon" class="site-footer">
 		<div class="container">
