@@ -13,35 +13,39 @@
 
 	</div><!-- #content -->
 
-	<div id="sponsors">
-		<div class="container">
-			<p>SPONSORS</p>
-			<div id="sponsors-img-container">
-				<?php
-				$query = new WP_Query(array(
-					'post_type' => 'sponsors',
-					'post_status' => 'publish',
-					'posts_per_page' => -1
-				));
+	<?php
+	$query = new WP_Query(array(
+		'post_type' => 'sponsors',
+		'post_status' => 'publish',
+		'posts_per_page' => -1
+	));
 
-				while ($query->have_posts()) {
-					$query->the_post();
-					$post_id = get_the_ID();
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
-					
-					if (get_field('sponsor_website', $post_id)) {
-						$sponsor_website = get_field('sponsor_website', $post_id);
-						echo "<a href='" . $sponsor_website . "' target='_blank'><img src='" . $image[0] . "'/></a>";
-					} else {
-						echo "<img src='" . $image[0] . "'/>";
+	if (have_posts()) {
+	?>
+		<div id="sponsors">
+			<div class="container">
+				<p>SPONSORS</p>
+				<div id="sponsors-img-container">
+					<?php
+					while ($query->have_posts()) {
+						$query->the_post();
+						$post_id = get_the_ID();
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+						
+						if (get_field('sponsor_website', $post_id)) {
+							$sponsor_website = get_field('sponsor_website', $post_id);
+							echo "<a href='" . $sponsor_website . "' target='_blank'><img src='" . $image[0] . "'/></a>";
+						} else {
+							echo "<img src='" . $image[0] . "'/>";
+						}
 					}
-				}
 
-				wp_reset_query();
-				?>
+					wp_reset_query();
+					?>
+				</div>
 			</div>
 		</div>
-	</div>
+	<?php } ?>
 			
 	<footer id="colophon" class="site-footer">
 		<div class="container">

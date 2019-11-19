@@ -106,8 +106,6 @@
 		'posts_per_page' => -1
 	));
 
-	query_posts($args);
-
 	if (have_posts()) {
 	?>
 		<div id="sponsors">
@@ -135,7 +133,6 @@
 		</div>
 	<?php } ?>
 
-			
 	<footer id="colophon" class="site-footer">
 		<div class="container">
 			<div id="kstate-logo-holder">
