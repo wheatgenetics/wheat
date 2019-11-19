@@ -39,7 +39,14 @@ get_header('front');
 			while ( have_posts() ) :
 				the_post();
 			?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>				
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php
+					$wgrc_database_shortcode = get_field('wgrc_database_shortcode');
+					if ($wgrc_database_shortcode) {
+						echo '<div class="container">' . $wgrc_database_shortcode . '</div>';
+					}
+					?>
+					
 					<div class="entry-content">
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
