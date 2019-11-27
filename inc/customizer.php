@@ -78,6 +78,18 @@ function wheat_customize_register( $wp_customize ) {
 		'section'    => 'wheat_colors',
 		'settings'   => 'wheat_main_menu_link_underline_color',
 	) ) );
+
+	/* Button color */
+	$wp_customize->add_setting( 'wheat_button_color' , array(
+		'default'     => '#333333',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_button_color', array(
+		'label'        => 'Button Color',
+		'section'    => 'wheat_colors',
+		'settings'   => 'wheat_button_color',
+	) ) );
 }
 add_action( 'customize_register', 'wheat_customize_register' );
 
@@ -106,9 +118,7 @@ function wheat_customizer_css() {
 			}
 		}
 
-		.site-footer,
-		.wp-block-button__link,
-		.dark-gray-button {
+		.site-footer {
 			background-color: <?php echo get_theme_mod('wheat_secondary_color', '#333333'); ?>;
 		}
 
@@ -119,6 +129,10 @@ function wheat_customizer_css() {
 		.main-navigation .menu-main-menu-container>ul>li.current-menu-item>a:before,
   		.main-navigation ul li.current-menu-parent>a:before {
 			border-bottom: 1px solid <?php echo get_theme_mod('wheat_main_menu_link_underline_color', '#FDC345'); ?>;
+		}
+
+		.wp-block-button__link {
+			background-color: <?php echo get_theme_mod('wheat_button_color', '#333333'); ?>;
 		}
 	</style>
 <?php
