@@ -131,7 +131,7 @@ function wheat_customizer_css() {
 			border-bottom: 1px solid <?php echo get_theme_mod('wheat_main_menu_link_underline_color', '#FDC345'); ?>;
 		}
 
-		.wp-block-button__link {
+		.wp-block-button__link, a.button {
 			background-color: <?php echo get_theme_mod('wheat_button_color', '#333333'); ?>;
 		}
 	</style>
