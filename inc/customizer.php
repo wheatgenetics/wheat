@@ -25,8 +25,33 @@ function wheat_customize_register( $wp_customize ) {
 			'render_callback' => 'wheat_customize_partial_blogdescription',
 		) );
 	}
+
+	$wp_customize->add_section( 'wheat_colors' , array(
+		'title'      => 'Wheat Colors',
+		'priority'   => 1000,
+	) );
+
+	$wp_customize->add_setting( 'wheat_footer_background_color' , array(
+		'default'     => '#333333',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_footer_background_color', array(
+		'label'        => 'Footer Background Color',
+		'section'    => 'wheat_colors',
+		'settings'   => 'wheat_footer_background_color',
+	) ) );
 }
 add_action( 'customize_register', 'wheat_customize_register' );
+
+function wheat_customizer_css() {
+?>
+	<style type="text/css">
+		.site-footer { background-color: <?php echo get_theme_mod('wheat_footer_background_color', '#dfa345'); ?>; }
+	</style>
+<?php
+}
+add_action( 'wp_head', 'wheat_customizer_css');
 
 /**
  * Render the site title for the selective refresh partial.
