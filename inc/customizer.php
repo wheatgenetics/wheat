@@ -60,8 +60,33 @@ add_action( 'customize_register', 'wheat_customize_register' );
 function wheat_customizer_css() {
 ?>
 	<style type="text/css">
-		#sponsorsŻ, #home-page-intro-box { background-color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?>; }
-		.site-footer { background-color: <?php echo get_theme_mod('wheat_secondary_color', '#333333'); ?>; }
+		#sponsors,
+		#home-page-intro-box,
+		.site-header .social-menu,
+		.purple-background {
+			background-color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?>;
+		}
+
+		.recent-post-carousel.design-1 a.readmorebtn,
+		.recent-post-carousel.design-1 a.readmorebtn:hover,
+		.recent-post-carousel.design-1 a.readmorebtn:focus,
+		.recent-post-carousel.design-1 .slick-arrow,
+		.recent-post-carousel.design-1 .slick-arrow:hover,
+		.recent-post-carousel.design-1 .slick-arrow:focus {
+			background-color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?> !important;
+		}
+
+		@media screen and (min-width: 900px) {
+			.site-header .main-navigation {
+				background-color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?>;
+			}
+		}
+
+		.site-footer,
+		.wp-block-button__link,
+		.dark-gray-button {
+			background-color: <?php echo get_theme_mod('wheat_secondary_color', '#333333'); ?>;
+		}
 	</style>
 <?php
 }
