@@ -50,9 +50,21 @@ function wheat_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_secondary_color', array(
-		'label'        => 'Secondary color (footer background, secondary button background, etc.)',
+		'label'        => 'Secondary Color (footer background, secondary button background, etc.)',
 		'section'    => 'wheat_colors',
 		'settings'   => 'wheat_secondary_color',
+	) ) );
+
+	/* Main menu link color */
+	$wp_customize->add_setting( 'wheat_main_menu_link_color' , array(
+		'default'     => '#c1bcbc',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_main_menu_link_color', array(
+		'label'        => 'Main Menu Link Color',
+		'section'    => 'wheat_colors',
+		'settings'   => 'wheat_main_menu_link_color',
 	) ) );
 }
 add_action( 'customize_register', 'wheat_customize_register' );
@@ -86,6 +98,10 @@ function wheat_customizer_css() {
 		.wp-block-button__link,
 		.dark-gray-button {
 			background-color: <?php echo get_theme_mod('wheat_secondary_color', '#333333'); ?>;
+		}
+
+		.main-navigation a {
+			color: <?php echo get_theme_mod('wheat_main_menu_link_color', '#c1bcbc'); ?>;
 		}
 	</style>
 <?php

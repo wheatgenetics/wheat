@@ -965,7 +965,7 @@ ul.menu li {
   padding: .5em 1em .5em 0;
   text-decoration: none;
   text-transform: uppercase;
-  color: #C1BCBC;
+  /* color: #C1BCBC; */
 }
 
 .home .main-navigation a {
