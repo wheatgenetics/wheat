@@ -82,10 +82,21 @@ $phone = get_field('phone');
 			the_excerpt();
 
 			if ($post_type == 'team') {
-				echo '<p>' . $bio . '</p>';
-				echo $office_location;
-				echo '<br><a href="mailto:' . $email . '" target="_blank">' . $email . '</a>';
-				echo '<br><a href="tel:' . $phone . '" target="_blank">' . $phone . '</a>';
+				if (!empty($bio)) {
+					echo '<p>' . $bio . '</p>';
+				}
+
+				if (!empty($office_location)) {
+					echo '<p>' . $office_location . '</p>';
+				}
+
+				if (!empty($email)) {
+					echo '<a href="mailto:' . $email . '" target="_blank">' . $email . '</a><br>';
+				}
+
+				if (!empty($phone)) {
+					echo '<a href="tel:' . $phone . '" target="_blank">' . $phone . '</a>';
+				}
 			}
 
 			if ($post_type == 'publications' || $post_type == 'news') {
