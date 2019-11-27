@@ -1037,11 +1037,11 @@ ul.menu li {
     height: 1px;
     bottom: 12px;
     left: 25%;
-    border-bottom: 1px solid #FDC345;
+    /* border-bottom: 1px solid #FDC345; */
   }
 
   .sub-menu a {
-    color: #404040;
+    color: #404040 !important;
   }
 }
 

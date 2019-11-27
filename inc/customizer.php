@@ -66,6 +66,18 @@ function wheat_customize_register( $wp_customize ) {
 		'section'    => 'wheat_colors',
 		'settings'   => 'wheat_main_menu_link_color',
 	) ) );
+
+	/* Main menu link underline color */
+	$wp_customize->add_setting( 'wheat_main_menu_link_underline_color' , array(
+		'default'     => '#FDC345',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_main_menu_link_underline_color', array(
+		'label'        => 'Main Menu Link Underline Color',
+		'section'    => 'wheat_colors',
+		'settings'   => 'wheat_main_menu_link_underline_color',
+	) ) );
 }
 add_action( 'customize_register', 'wheat_customize_register' );
 
@@ -102,6 +114,11 @@ function wheat_customizer_css() {
 
 		.main-navigation a {
 			color: <?php echo get_theme_mod('wheat_main_menu_link_color', '#c1bcbc'); ?>;
+		}
+
+		.main-navigation .menu-main-menu-container>ul>li.current-menu-item>a:before,
+  		.main-navigation ul li.current-menu-parent>a:before {
+			border-bottom: 1px solid <?php echo get_theme_mod('wheat_main_menu_link_underline_color', '#FDC345'); ?>;
 		}
 	</style>
 <?php
