@@ -31,6 +31,7 @@ function wheat_customize_register( $wp_customize ) {
 		'priority'   => 1000,
 	) );
 
+	/* Footer background color */
 	$wp_customize->add_setting( 'wheat_footer_background_color' , array(
 		'default'     => '#333333',
 		'transport'   => 'refresh',
@@ -41,6 +42,18 @@ function wheat_customize_register( $wp_customize ) {
 		'section'    => 'wheat_colors',
 		'settings'   => 'wheat_footer_background_color',
 	) ) );
+
+	/* Sponsors section background color */
+	$wp_customize->add_setting( 'wheat_sponsors_background_color' , array(
+		'default'     => '#472979',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_sponsors_background_color', array(
+		'label'        => 'Sponsors Background Color',
+		'section'    => 'wheat_colors',
+		'settings'   => 'wheat_sponsors_background_color',
+	) ) );
 }
 add_action( 'customize_register', 'wheat_customize_register' );
 
@@ -48,6 +61,7 @@ function wheat_customizer_css() {
 ?>
 	<style type="text/css">
 		.site-footer { background-color: <?php echo get_theme_mod('wheat_footer_background_color', '#dfa345'); ?>; }
+		#sponsors { background-color: <?php echo get_theme_mod('wheat_sponsors_background_color', '#472979'); ?>; }
 	</style>
 <?php
 }
