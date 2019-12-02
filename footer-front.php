@@ -133,6 +133,40 @@
 		</div>
 	<?php } ?>
 
+	<?php
+	$query = new WP_Query(array(
+		'post_type' => 'industry_partners',
+		'post_status' => 'publish',
+		'posts_per_page' => -1
+	));
+
+	if ($query->have_posts()) {
+	?>
+		<div id="sponsors">
+			<div class="container">
+				<p>INDUSTRY PARTNERS</p>
+				<div id="sponsors-img-container">
+					<?php
+					while ($query->have_posts()) {
+						$query->the_post();
+						$post_id = get_the_ID();
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+						
+						if (get_field('industry_partner_website', $post_id)) {
+							$industry_partner_website = get_field('industry_partner_website', $post_id);
+							echo "<a href='" . $industry_partner_website . "' target='_blank'><img src='" . $image[0] . "'/></a>";
+						} else {
+							echo "<img src='" . $image[0] . "'/>";
+						}
+					}
+
+					wp_reset_query();
+					?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+
 	<footer id="colophon" class="site-footer">
 		<div class="container">
 			<div id="kstate-logo-holder">
