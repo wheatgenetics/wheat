@@ -1305,7 +1305,7 @@ ul.menu li {
 }
 
 #page-title {
-  color: #472979;
+  /* color: #472979; */
   text-transform: uppercase;
 }
 
@@ -1357,7 +1357,7 @@ h3.entry-title {
 }
 
 h3.entry-title a {
-  color: #472979;
+  /* color: #472979; */
   font-weight: 600;
   font-size: 0.9em;
 }
@@ -1447,7 +1447,7 @@ footer #contact {
 
 .widget h2.widget-title {
   font-size: 1.2em;
-  color: #472979;
+  /* color: #472979; */
   text-transform: uppercase;
   margin-top: 1.6em;
 }

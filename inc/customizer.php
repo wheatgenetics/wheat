@@ -118,6 +118,10 @@ function wheat_customizer_css() {
 			}
 		}
 
+		h3.entry-title a, #page-title, .widget h2.widget-title {
+			color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?>;
+		}
+
 		.site-footer {
 			background-color: <?php echo get_theme_mod('wheat_secondary_color', '#333333'); ?>;
 		}
