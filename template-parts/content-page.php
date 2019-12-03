@@ -21,6 +21,14 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<?php
+	$wgrc_database_shortcode = get_field('wgrc_database_shortcode');
+
+	if ($wgrc_database_shortcode) {
+		echo '<div class="container">' . $wgrc_database_shortcode . '</div>';
+	}
+	?>
+
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php
