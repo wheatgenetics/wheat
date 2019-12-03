@@ -45,12 +45,6 @@ get_header('front');
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 
-					<?php
-					$wgrc_database_shortcode = get_field('wgrc_database_shortcode');
-					if ($wgrc_database_shortcode) {
-						echo '<div class="container">' . $wgrc_database_shortcode . '</div>';
-					}
-					?>
 				</article><!-- #post-<?php the_ID(); ?> -->
 			<?php endwhile; // End of the loop. ?>
 
