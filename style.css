@@ -907,6 +907,10 @@ a:active {
   padding: .4em .7em;
 }
 
+footer a {
+    color: #ffffff;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -1410,8 +1414,8 @@ h3.entry-title a {
 
 footer .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3.5em;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1.5em;
 }
 
 @media screen and (min-width: 600px) {
@@ -1425,15 +1429,21 @@ footer .container {
   width: 14em;
 }
 
-footer .social-menu ul a {
-  padding: 0 .7em;
-  line-height: 1em;
+@media screen and (min-width: 600px) {
+  #kstate-logo-holder {
+    width: 450px;
+  }
 }
 
-footer #contact {
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* footer #our-location {
   grid-column-start: 1;
   grid-column-end: 3;
-}
+} */
 
 /*--------------------------------------------------------------
 # Widgets
