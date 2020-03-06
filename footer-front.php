@@ -172,21 +172,42 @@
 			<div id="kstate-logo-holder">
 				<img id="kstate-logo" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasStateUniversity.png" />
 			</div>
-			
-			<nav class="social-menu">
+
+			<div id="navigation">
+				<p><strong>NAVIGATION</strong></p>
 				<?php
 				wp_nav_menu( array(
-					'theme_location' => 'social'
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+					'depth' => 1
 				) );
 				?>
-			</nav>
+			</div>
 
-			<div id="contact">
+			<div id="other-sites">
+				<p><strong>OTHER SITES</strong></p>
+				<a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">AWG Innovation Lab</a>
+				<br><a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">ILCI Innovation Lab</a>
+				<br><a href="http://phenoapps.org/" target="_blank">PhenoApps</a>
+				<br><a href="https://wgrc-iucrc.k-state.edu/" target="_blank">WGRC IUCRC</a>
+				<br><a href="https://wiki.wheatgenetics.k-state.edu/index.php?title=Main_Page" target="_blank">Lab Wiki</a>
+			</div>
+
+			<div id="our-location">
+				<p><strong>OUR LOCATION</strong></p>
 				Kansas State University
 				<br>4702 Throckmorton PSC
 				<br>1712 Claflin Road
 				<br>Manhattan, KS 66506
 			</div>
+			
+			<nav class="social-menu">
+				<p><strong>FOLLOW US</strong></p>
+				<a href="https://www.facebook.com/people/Poland-Lab/100009695019092" target="_blank">Facebook</a>
+				<br><a href="https://twitter.com/WheatLab" target="_blank">Twitter</a>
+				<br><a href="https://github.com/wheatgenetics" target="_blank">GitHub</a>
+				<br><a href="" target="_blank">Flickr</a>
+			</nav>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
