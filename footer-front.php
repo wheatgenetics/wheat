@@ -173,7 +173,7 @@
 				<img id="kstate-logo" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasStateUniversity.png" />
 			</div>
 
-			<div id="navigation">
+			<div class="footer-box">
 				<h4>NAVIGATION</strong></h4>
 				<?php
 				wp_nav_menu( array(
@@ -184,16 +184,18 @@
 				?>
 			</div>
 
-			<div id="other-sites">
+			<div class="footer-box">
 				<h4>OTHER SITES</strong></h4>
-				<a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">AWG Innovation Lab</a>
-				<br><a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">ILCI Innovation Lab</a>
-				<br><a href="http://phenoapps.org/" target="_blank">PhenoApps</a>
-				<br><a href="https://wgrc-iucrc.k-state.edu/" target="_blank">WGRC IUCRC</a>
-				<br><a href="https://wiki.wheatgenetics.k-state.edu/index.php?title=Main_Page" target="_blank">Lab Wiki</a>
+				<ul>
+					<li><a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">AWG Innovation Lab</a></li>
+					<li><a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">ILCI Innovation Lab</a></li>
+					<li><a href="http://phenoapps.org/" target="_blank">PhenoApps</a></li>
+					<li><a href="https://wgrc-iucrc.k-state.edu/" target="_blank">WGRC IUCRC</a></li>
+					<li><a href="https://wiki.wheatgenetics.k-state.edu/index.php?title=Main_Page" target="_blank">Lab Wiki</a></li>
+				</ul>
 			</div>
 
-			<div id="our-location">
+			<div class="footer-box">
 				<h4>OUR LOCATION</strong></h4>
 				Kansas State University
 				<br>4702 Throckmorton PSC
@@ -201,7 +203,7 @@
 				<br>Manhattan, KS 66506
 			</div>
 			
-			<nav class="social-menu">
+			<nav class="social-menu footer-box">
 				<h4>FOLLOW US</strong></h4>
 				<a href="https://www.facebook.com/people/Poland-Lab/100009695019092" target="_blank">Facebook</a>
 				<br><a href="https://twitter.com/WheatLab" target="_blank">Twitter</a>
