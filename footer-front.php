@@ -197,10 +197,10 @@
 
 			<div class="footer-box">
 				<h4>OUR LOCATION</strong></h4>
-				Kansas State University
+				<p>Kansas State University
 				<br>4702 Throckmorton PSC
 				<br>1712 Claflin Road
-				<br>Manhattan, KS 66506
+				<br>Manhattan, KS 66506</p>
 			</div>
 			
 			<nav class="footer-box">
