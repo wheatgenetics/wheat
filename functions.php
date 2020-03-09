@@ -46,6 +46,7 @@ if ( ! function_exists( 'wheat_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'wheat' ),
 			'social' => esc_html__( 'Social Media Menu', 'wheat' ),
+			'other-sites' => esc_html__( 'Other Sites Menu', 'wheat' ),
 		) );
 
 		/*
