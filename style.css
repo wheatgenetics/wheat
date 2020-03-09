@@ -1410,10 +1410,13 @@ h3.entry-title a {
   position: relative;
   padding: 1em 0;
   color: white;
+}
+
+.site-footer .footer-box {
   font-size: .8em;
 }
 
-.site-footer a:hover {
+.site-footer .footer-box a:hover {
   color: #FDC345;
 }
 
