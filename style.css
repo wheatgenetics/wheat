@@ -1410,6 +1410,7 @@ h3.entry-title a {
   position: relative;
   padding: 1em 0;
   color: white;
+  font-size: .8em;
 }
 
 .site-footer a:hover {
