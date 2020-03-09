@@ -174,7 +174,7 @@
 			</div>
 
 			<div id="navigation">
-				<p><strong>NAVIGATION</strong></p>
+				<h4>NAVIGATION</strong></h4>
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -185,7 +185,7 @@
 			</div>
 
 			<div id="other-sites">
-				<p><strong>OTHER SITES</strong></p>
+				<h4>OTHER SITES</strong></h4>
 				<a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">AWG Innovation Lab</a>
 				<br><a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">ILCI Innovation Lab</a>
 				<br><a href="http://phenoapps.org/" target="_blank">PhenoApps</a>
@@ -194,7 +194,7 @@
 			</div>
 
 			<div id="our-location">
-				<p><strong>OUR LOCATION</strong></p>
+				<h4>OUR LOCATION</strong></h4>
 				Kansas State University
 				<br>4702 Throckmorton PSC
 				<br>1712 Claflin Road
@@ -202,7 +202,7 @@
 			</div>
 			
 			<nav class="social-menu">
-				<p><strong>FOLLOW US</strong></p>
+				<h4>FOLLOW US</strong></h4>
 				<a href="https://www.facebook.com/people/Poland-Lab/100009695019092" target="_blank">Facebook</a>
 				<br><a href="https://twitter.com/WheatLab" target="_blank">Twitter</a>
 				<br><a href="https://github.com/wheatgenetics" target="_blank">GitHub</a>
