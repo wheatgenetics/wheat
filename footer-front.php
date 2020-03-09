@@ -185,14 +185,14 @@
 			</div>
 
 			<div class="footer-box">
-				<h4>OTHER SITES</strong></h4>
-				<ul>
-					<li><a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">AWG Innovation Lab</a></li>
-					<li><a href="https://www.feedthefuture.gov/feed-the-future-innovation-labs/" target="_blank">ILCI Innovation Lab</a></li>
-					<li><a href="http://phenoapps.org/" target="_blank">PhenoApps</a></li>
-					<li><a href="https://wgrc-iucrc.k-state.edu/" target="_blank">WGRC IUCRC</a></li>
-					<li><a href="https://wiki.wheatgenetics.k-state.edu/index.php?title=Main_Page" target="_blank">Lab Wiki</a></li>
-				</ul>
+        <h4>OTHER SITES</strong></h4>
+        <?php
+				wp_nav_menu( array(
+					'theme_location' => 'other-sites',
+					'menu_id'        => 'other-sites',
+					'depth' => 1
+				) );
+				?>
 			</div>
 
 			<div class="footer-box">
@@ -203,12 +203,15 @@
 				<br>Manhattan, KS 66506
 			</div>
 			
-			<nav class="social-menu footer-box">
-				<h4>FOLLOW US</strong></h4>
-				<a href="https://www.facebook.com/people/Poland-Lab/100009695019092" target="_blank">Facebook</a>
-				<br><a href="https://twitter.com/WheatLab" target="_blank">Twitter</a>
-				<br><a href="https://github.com/wheatgenetics" target="_blank">GitHub</a>
-				<br><a href="" target="_blank">Flickr</a>
+			<nav class="footer-box">
+        <h4>FOLLOW US</strong></h4>
+        <?php
+				wp_nav_menu( array(
+					'theme_location' => 'social-footer',
+					'menu_id'        => 'social-menu-footer',
+					'depth' => 1
+				) );
+				?>
 			</nav>
 		</div>
 	</footer><!-- #colophon -->
