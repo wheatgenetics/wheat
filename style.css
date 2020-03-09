@@ -1412,6 +1412,10 @@ h3.entry-title a {
   color: white;
 }
 
+.site-footer a:hover {
+  color: #FDC345;
+}
+
 footer .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
