@@ -1291,6 +1291,14 @@ ul.menu li {
     margin-top: auto;
   }
 
+  .menu-social-container #menu-social a:hover {
+    color: #fdc345;
+  }
+
+  .home .menu-social-container #menu-social a:hover {
+    color: #592c82;
+  }
+
   .site-header .site-branding {
     flex: 1;
     min-width: 170px;
