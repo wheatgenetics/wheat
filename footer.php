@@ -83,24 +83,50 @@
 			
 	<footer id="colophon" class="site-footer">
 		<div class="container">
-			<div id="kstate-logo-holder">
+		  <div id="kstate-logo-holder">
 				<img id="kstate-logo" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/wheat/images/KansasStateUniversity.png" />
 			</div>
-			
-			<nav class="social-menu">
+
+			<div class="footer-box">
+				<h4>NAVIGATION</strong></h4>
 				<?php
 				wp_nav_menu( array(
-					'theme_location' => 'social'
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu-footer',
+					'depth' => 1
+				) );
+				?>
+			</div>
+
+			<div class="footer-box">
+        <h4>OTHER SITES</strong></h4>
+        <?php
+				wp_nav_menu( array(
+					'theme_location' => 'other-sites',
+					'menu_id'        => 'other-sites',
+					'depth' => 1
+				) );
+				?>
+			</div>
+
+			<div class="footer-box">
+				<h4>OUR LOCATION</strong></h4>
+				<p>Kansas State University
+				<br>4702 Throckmorton PSC
+				<br>1712 Claflin Road
+				<br>Manhattan, KS 66506</p>
+			</div>
+			
+			<nav class="footer-box">
+        <h4>FOLLOW US</strong></h4>
+        <?php
+				wp_nav_menu( array(
+					'theme_location' => 'social-footer',
+					'menu_id'        => 'social-menu-footer',
+					'depth' => 1
 				) );
 				?>
 			</nav>
-
-			<div id="contact">
-				Kansas State University
-				<br>4702 Throckmorton PSC
-				<br>1712 Claflin Road
-				<br>Manhattan, KS 66506
-			</div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
