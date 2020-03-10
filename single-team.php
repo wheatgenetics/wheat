@@ -39,33 +39,11 @@ $previous = get_field('previous');
 
             <div class="entry-content">
               <?php
-              // the_post_thumbnail('thumbnail');
               the_post_thumbnail('medium', ['class' => 'alignleft']);
-              // the_post_thumbnail_caption();
 
               if (!empty($bio)) {
                 echo $bio;
               }
-
-              the_content(
-                sprintf(
-                  wp_kses(
-                    /* translators: %s: Name of current post. Only visible to screen readers */
-                    __( '', 'wheat' ),
-                    array(
-                      'span' => array(
-                        'class' => array(),
-                      ),
-                    )
-                  ),
-                  get_the_title()
-                )
-              );
-
-              wp_link_pages( array(
-                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
-                'after'  => '</div>',
-              ) );
               ?>
 
               <?php if ($post_type == 'team' && (!empty($education) || !empty($appointments) || !empty($previous))) {
