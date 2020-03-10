@@ -44,7 +44,7 @@ $slider = get_field('slider');
             <header class="entry-header">
               <?php
 
-              the_title( '<h3 class="entry-title">', '</h3>' );
+              the_title( '<h4 class="entry-title">', '</h4>' );
 
               echo "<p class='gray' style='text-transform:uppercase;'>" . $publication_date . "</p>";
 
