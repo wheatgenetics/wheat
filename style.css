@@ -1612,6 +1612,17 @@ footer ul {
   padding: 0;
 }
 
+.entry-content img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .entry-content img {
+    width: auto;
+  }
+}
+
 /* Make sure embeds and iframes fit their containers. */
 
 embed,
