@@ -111,7 +111,8 @@ $slider = get_field('slider');
 
               <br> -->
 
-              <?php if ($post_type == 'news') { ?>
+              <?php if (($post_type == 'news') && (!empty($link))){ ?>
+                <hr class="wp-block-separator">
                 <a href="<?php echo $link; ?>" class="dark-gray-button" target="_blank">Go to original story</a>
               <?php } ?>
 
