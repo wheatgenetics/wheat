@@ -438,7 +438,7 @@ textarea {
   font-family: "Raleway", sans-serif;
   font-size: 14.4px;
   font-size: 0.9rem;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 700px) {
@@ -504,6 +504,12 @@ i {
 cite {
   font-style: normal;
   color: #3D4451;
+  font-size: .6em;
+  font-weight: normal;
+  /* line-height: 1.2em; */
+  display: block;
+  text-align: right;
+  margin-top: 10px;
 }
 
 blockquote,
@@ -511,6 +517,15 @@ blockquote,
 .wp-block-quote.is-style-large {
   margin: 2em;
   width: 50%;
+  float: left;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #472979;
+}
+
+blockquote cite:before {
+  content: "\2014 \2009";
+  
 }
 
 .wp-block-quote.is-large cite,
@@ -539,13 +554,13 @@ blockquote p:after {
 .wp-block-quote.is-large footer,
 .wp-block-quote.is-style-large cite,
 .wp-block-quote.is-style-large footer {
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 
 cite:before,
 .wp-block-quote.is-large cite:before,
 .wp-block-quote.is-style-large cite:before {
-  content: "~ ";
+  /* content: "~ "; */
 }
 
 address {
