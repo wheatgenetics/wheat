@@ -14,10 +14,6 @@ get_header();
 $publication_date = get_field('publication_date');
 $news_date = get_the_date( 'm.d.Y' );
 $link = get_field('original_source_link');
-$bio = get_field('bio');
-$email = get_field('email');
-$office_location = get_field('office_location');
-$phone = get_field('phone');
 $project_website = get_field('project_website');
 $slider = get_field('slider');
 ?>
@@ -78,17 +74,6 @@ $slider = get_field('slider');
                 $journal_date[] = $publication_date;
               }
 
-              if (!empty($title_position)) {
-                echo $title_position;
-              }
-
-              if ($post_type == 'people') {
-                echo '<p>' . $bio . '</p>';
-                echo $office_location;
-                echo '<br><a href="mailto:' . $email . '" target="_blank">' . $email . '</a>';
-                echo '<br><a href="tel:' . $phone . '" target="_blank">' . $phone . '</a>';
-              }
-
               the_content(
                 sprintf(
                   wp_kses(
@@ -109,12 +94,6 @@ $slider = get_field('slider');
                 'after'  => '</div>',
               ) );
               ?>
-              
-              <!-- <br>
-
-              <hr class="dotted">
-
-              <br> -->
 
               <?php if (($post_type == 'news') && (!empty($link))) { ?>
                 <hr class="wp-block-separator">
