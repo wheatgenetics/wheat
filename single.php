@@ -12,6 +12,7 @@ get_header();
 
 <?php
 $publication_date = get_field('publication_date');
+$news_date = get_the_date( 'm.d.Y' );
 $link = get_field('original_source_link');
 $bio = get_field('bio');
 $email = get_field('email');
@@ -45,6 +46,10 @@ $slider = get_field('slider');
               <?php
 
               the_title( '<h4 class="entry-title">', '</h4>' );
+
+              if ($post_type == 'news') {
+                echo "<p class='gray' style='text-transform:uppercase;'>" . $news_date . "</p>";
+              }
 
               echo "<p class='gray' style='text-transform:uppercase;'>" . $publication_date . "</p>";
 
@@ -111,7 +116,7 @@ $slider = get_field('slider');
 
               <br> -->
 
-              <?php if (($post_type == 'news') && (!empty($link))){ ?>
+              <?php if (($post_type == 'news') && (!empty($link))) { ?>
                 <hr class="wp-block-separator">
                 <a href="<?php echo $link; ?>" class="dark-gray-button" target="_blank">Go to original story</a>
               <?php } ?>
