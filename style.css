@@ -1387,6 +1387,10 @@ article img.attachment-thumbnail {
   flex: 1;
 }
 
+.entry-header {
+  width: 100%;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
