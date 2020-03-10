@@ -516,11 +516,18 @@ blockquote,
 .wp-block-quote.is-large,
 .wp-block-quote.is-style-large {
   margin: 2em;
-  width: 50%;
-  float: left;
   font-size: 1.3em;
   font-weight: bold;
   color: #472979;
+}
+
+@media screen and (min-width: 600px) {
+  blockquote,
+  .wp-block-quote.is-large,
+  .wp-block-quote.is-style-large {
+    width: 50%;
+    float: left;
+  }
 }
 
 blockquote cite:before {
