@@ -1376,6 +1376,11 @@ h3.entry-title a {
   font-size: 0.9em;
 }
 
+h4.entry-title {
+  color: #472979;
+  font-weight: 600;
+}
+
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
