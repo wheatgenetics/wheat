@@ -83,7 +83,7 @@ $phone = get_field('phone');
 
 			if ($post_type == 'team') {
 				if (!empty($bio)) {
-					echo '<p>' . $bio . '</p>';
+					echo $bio;
 				}
 
 				if (!empty($office_location)) {
