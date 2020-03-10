@@ -755,7 +755,7 @@ input[type="submit"]:focus {
 
 .wp-block-button__link,
 .dark-gray-button {
-  background-color: #32373c;
+  background-color: #2d2c2c;
   border: none;
   box-shadow: none;
   cursor: pointer;
@@ -771,6 +771,11 @@ input[type="submit"]:focus {
   padding: .9em 2.3em;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.wp-block-button__link:hover,
+.dark-gray-button:hover {
+  background-color: #592c82;
 }
 
 .dark-gray-button:active,
