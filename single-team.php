@@ -63,7 +63,6 @@ $previous = get_field('previous');
                   echo "<h4 class='purple'>Previous</h4>";
                   echo $previous;
                 }
-
               }
               ?>
             </div><!-- .entry-content -->
