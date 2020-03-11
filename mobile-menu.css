@@ -99,7 +99,7 @@
   }
 
   .input-toggler:checked~.menu-toggler .menu-toggler__line {
-    background: #C1BCBC;
+    background: #ffffff;
   }
 
   .input-toggler:checked~.menu-toggler .menu-toggler__line:nth-child(1) {
