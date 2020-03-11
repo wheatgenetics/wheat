@@ -22,21 +22,21 @@
 
 <body <?php body_class(); ?>>
 
-<input type="checkbox" id="menuToggler" class="input-toggler" />
+<!-- <input type="checkbox" id="menuToggler" class="input-toggler" />
 <label for="menuToggler" class="menu-toggler">
 	<span class="menu-toggler__line"></span>
 	<span class="menu-toggler__line"></span>
 	<span class="menu-toggler__line"></span>
-</label>
+</label> -->
 
-<aside class="sidebar">
+<!-- <aside class="sidebar"> -->
 	<?php
-	wp_nav_menu( array(
-		'theme_location' => 'menu-1',
-		'menu_id'        => 'primary-menu',
-	) );
+	// wp_nav_menu( array(
+	// 	'theme_location' => 'menu-1',
+	// 	'menu_id'        => 'primary-menu',
+	// ) );
 	?>
-</aside>
+<!-- </aside> -->
 	
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wheat' ); ?></a>
