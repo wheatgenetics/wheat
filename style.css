@@ -1380,11 +1380,13 @@ article img.attachment-thumbnail {
   margin: 0 1em 1em 0;
 }
 
-.header-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+@media screen and (min-width: 600px) {
+  .header-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
 }
 
 .entry-header {
