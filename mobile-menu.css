@@ -9,8 +9,9 @@
     width: var(--sidebar-width);
     -webkit-transform: translateX(calc(var(--sidebar-width) * -1));
     transform: translateX(calc(var(--sidebar-width) * -1));
-    background: -webkit-linear-gradient(top left, #472979, #C1BCBC);
-    background: linear-gradient(to bottom right, #472979, #C1BCBC);
+    /* background: -webkit-linear-gradient(top left, #472979, #C1BCBC); */
+    /* background: linear-gradient(to bottom right, #472979, #C1BCBC); */
+    background-color: #472979;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -23,7 +24,7 @@
     position: absolute;
     top: 0;
     min-height: 100vh;
-    opacity: .5;
+    /* opacity: .5; */
     z-index: 1;
     padding-top: 50px;
   }
@@ -118,7 +119,7 @@
   .input-toggler:checked~.sidebar {
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    opacity: .98;
+    /* opacity: .98; */
   }
 
   @media screen and (min-width: 900px) {
