@@ -21,7 +21,45 @@ $previous = get_field('previous');
 ?>
 
 	<div class="container">
-		<?php get_sidebar(); ?>
+    <aside id="secondary" class="widget-area">
+      <section class="widget team-sidebar-widget">
+        <h2 class="widget-title">Our Team</h2>
+
+        <?php
+        $custom_terms = get_terms('position_category');
+
+        foreach($custom_terms as $custom_term) {
+          wp_reset_query();
+
+          $args = array('post_type' => 'team',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'position_category',
+                'field' => 'slug',
+                'terms' => $custom_term->slug,
+              ),
+            ),
+          );
+
+          $loop = new WP_Query($args);
+
+          if ($loop->have_posts()) {
+            echo '<span class="purple-background position-category-header">' . $custom_term->name . '</span>';
+
+            echo '<ul>';
+
+            while ($loop->have_posts()) {
+              $loop->the_post();
+              
+              echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+            }
+
+            echo '</ul>';
+          }
+        }
+        ?>         
+      </section>
+    </aside><!-- #secondary -->
 
 		<div id="page-title">
 			<?php post_type_archive_title(); ?>
