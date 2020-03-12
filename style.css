@@ -934,6 +934,12 @@ a:active {
 
 .purple-background {
   /* background-color: #472979; */
+  color: #ffffff;
+}
+
+.position-category-header {
+  display: block;
+  padding: 5px 10px;
 }
 
 .publication-date {
@@ -1585,6 +1591,14 @@ footer ul {
 .widget li a {
   color: #2D2C2C;
   text-transform: uppercase;
+}
+
+.widget.team-sidebar-widget ul {
+  padding: 10px 0 0 10px;
+}
+
+.widget.team-sidebar-widget li a {
+  text-transform: none;
 }
 
 /*--------------------------------------------------------------
