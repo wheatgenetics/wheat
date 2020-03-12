@@ -714,6 +714,11 @@ figure {
   display: inline-block;
 }
 
+@media screen and (max-width: 599px) {
+  figure {
+    width: 100% !important;
+  }
+}
 .wp-block-image {
   margin: 0 0 30px 0;
 }
@@ -1374,7 +1379,7 @@ ul.menu li {
 
 article {
   border-bottom: .1em dotted #dbd9d1;
-  padding: 20px 0;
+  padding: 30px 0 15px;
   width: 100%;
 }
 
