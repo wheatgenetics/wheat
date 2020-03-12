@@ -17,10 +17,6 @@ $journal = get_field('journal');
 $publication_date = get_the_date( 'm.d.Y' );
 $link = get_field('link');
 $journal_date = [];
-$bio = get_field('bio');
-$email = get_field('email');
-$office_location = get_field('office_location');
-$phone = get_field('phone');
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -64,40 +60,7 @@ $phone = get_field('phone');
 				$journal_date[] = $publication_date;
 			}
 
-			// the_content(
-			// 	sprintf(
-			// 		wp_kses(
-			// 			/* translators: %s: Name of current post. Only visible to screen readers */
-			// 			__( '', 'wheat' ),
-			// 			array(
-			// 				'span' => array(
-			// 					'class' => array(),
-			// 				),
-			// 			)
-			// 		),
-			// 		get_the_title()
-			// 	)
-			// );
-
 			the_excerpt();
-
-			if ($post_type == 'team') {
-				if (!empty($bio)) {
-					echo $bio;
-				}
-
-				if (!empty($office_location)) {
-					echo '<p>' . $office_location . '</p>';
-				}
-
-				if (!empty($email)) {
-					echo '<a href="mailto:' . $email . '" target="_blank">' . $email . '</a><br>';
-				}
-
-				if (!empty($phone)) {
-					echo '<a href="tel:' . $phone . '" target="_blank">' . $phone . '</a>';
-				}
-			}
 
 			if ($post_type == 'publications' || $post_type == 'news') {
 				echo "<p class='gray' style='text-transform:uppercase;'>" . implode('&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;', $journal_date) . "</p>";
