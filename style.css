@@ -1278,7 +1278,7 @@ ul.menu li {
 
 .site-header .site-branding .site-branding__text .site-title {
   margin: 0;
-  padding: 0;
+  padding: 10px 0 0 0;
   font-size: 1.6em;
   font-weight: 900;
   line-height: 1em;
