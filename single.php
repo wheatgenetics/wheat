@@ -41,7 +41,7 @@ $slider = get_field('slider');
             <header class="entry-header">
               <?php
 
-              the_title( '<h4 class="entry-title">', '</h4>' );
+              the_title( '<h3 class="entry-title">', '</h3>' );
 
               if ($post_type == 'news') {
                 echo "<p class='gray' style='text-transform:uppercase;'>" . $news_date . "</p>";
