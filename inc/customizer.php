@@ -118,7 +118,7 @@ function wheat_customizer_css() {
 			}
 		}
 
-		h3.entry-title a, #page-title, .widget h2.widget-title {
+		h3.entry-title, h3.entry-title a, h4.entry-title, #page-title, .widget h2.widget-title {
 			color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?>;
 		}
 

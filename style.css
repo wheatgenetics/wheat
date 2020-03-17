@@ -1412,20 +1412,20 @@ article img.attachment-thumbnail {
 }
 
 h3.entry-title {
-  color: #472979;
+  /* color: #472979; */
   line-height: 1.2;
   margin: 0 0 0.6em 0;
   text-transform: uppercase;
 }
 
 h3.entry-title a {
-  color: #472979;
+  /* color: #472979; */
   font-weight: 600;
   font-size: 0.9em;
 }
 
 h4.entry-title {
-  color: #472979;
+  /* color: #472979; */
   font-weight: 600;
 }
 
