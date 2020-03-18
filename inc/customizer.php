@@ -98,8 +98,10 @@ function wheat_customizer_css() {
 	<style type="text/css">
 		#sponsors,
 		#home-page-intro-box,
+		#research-areas .research-box,
 		.site-header .social-menu,
-		.purple-background {
+		.purple-background,
+		.wp-caption .wp-caption-text {
 			background-color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?>;
 		}
 
@@ -118,7 +120,17 @@ function wheat_customizer_css() {
 			}
 		}
 
-		h3.entry-title, h3.entry-title a, h4.entry-title, #page-title, .widget h2.widget-title {
+		.site-content .entry-content h3,
+		h3.entry-title,
+		h3.entry-title a,
+		h4.entry-title,
+		#page-title,
+		.widget h2.widget-title,
+		blockquote,
+		blockquote p,
+		.wp-block-quote.is-large,
+		.wp-block-quote.is-style-large,
+		.purple {
 			color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?>;
 		}
 

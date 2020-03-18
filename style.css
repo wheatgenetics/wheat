@@ -518,7 +518,6 @@ blockquote,
   margin: 2em;
   font-size: 1.3em;
   font-weight: bold;
-  color: #472979;
 }
 
 @media screen and (min-width: 600px) {
@@ -533,15 +532,6 @@ blockquote,
 blockquote cite:before {
   content: "\2014 \2009";
   
-}
-
-.wp-block-quote.is-large cite,
-.wp-block-quote.is-large footer,
-.wp-block-quote.is-style-large cite,
-.wp-block-quote.is-style-large footer {}
-
-blockquote p {
-  color: #472979;
 }
 
 blockquote p:before {
@@ -613,10 +603,6 @@ big {
 
 .gray {
   color: #A5A4A4;
-}
-
-.purple {
-  color: #472979;
 }
 
 /*--------------------------------------------------------------
@@ -938,7 +924,6 @@ a:active {
 }
 
 .purple-background {
-  /* background-color: #472979; */
   color: #ffffff;
 }
 
@@ -1304,7 +1289,6 @@ ul.menu li {
 
 .site-header .social-menu {
   display: none;
-  /* background-color: #472979; */
   height: 90px;
   max-width: 170px;
 }
@@ -1358,7 +1342,6 @@ ul.menu li {
     flex: 5;
     display: flex;
     justify-content: center;
-    /* background-color: #472979; */
     height: 90px;
   }
 
@@ -1368,7 +1351,6 @@ ul.menu li {
 }
 
 #page-title {
-  /* color: #472979; */
   text-transform: uppercase;
 }
 
@@ -1419,20 +1401,17 @@ article img.attachment-thumbnail {
 }
 
 h3.entry-title {
-  /* color: #472979; */
   line-height: 1.2;
   margin: 0 0 0.6em 0;
   text-transform: uppercase;
 }
 
 h3.entry-title a {
-  /* color: #472979; */
   font-weight: 600;
   font-size: 0.9em;
 }
 
 h4.entry-title {
-  /* color: #472979; */
   font-weight: 600;
 }
 
@@ -1454,7 +1433,6 @@ h4.entry-title {
 }
 
 .site-content .entry-content h3 {
-  color: #472979;
   font-weight: 400;
   font-size: 1.3em;
   margin-bottom: 10px;
@@ -1576,7 +1554,6 @@ footer ul {
 
 .widget h2.widget-title {
   font-size: 1.2em;
-  /* color: #472979; */
   text-transform: uppercase;
   margin-top: 1.6em;
 }
@@ -1685,7 +1662,6 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-  background-color: #472979;
   color: #ffffff;
   margin: 0;
   padding: 10px 0;
@@ -1760,7 +1736,6 @@ object {
 
 #research-areas .research-box {
   display: block;
-  background-color: #472979;
   width: 150px;
   color: white;
   text-align: center;
@@ -1924,7 +1899,6 @@ object {
 
 #sponsors {
   width: 100%;
-  background-color: #472979;
   color: white;
   padding: 1.5em 0 0;
   font-size: 0.65em;
@@ -2078,7 +2052,6 @@ object {
 
 .recent-post-carousel.design-1 a.readmorebtn {
   color: #fff;
-  /* background-color: #472979; */
   border: none;
   box-shadow: none;
   cursor: pointer;
@@ -2093,18 +2066,9 @@ object {
   text-transform: uppercase;
 }
 
-.recent-post-carousel.design-1 a.readmorebtn:hover, .recent-post-carousel.design-1 a.readmorebtn:focus {
-  /* background-color: #472979; */
-}
-
 .recent-post-carousel.design-1 .slick-arrow {
   border-radius: 50px !important;
   width: 45px;
-  /* background-color: #472979 !important; */
-}
-
-.recent-post-carousel.design-1 .slick-arrow:hover, .recent-post-carousel.design-1 .slick-arrow:focus {
-  /* background-color: #472979 !important; */
 }
 
 @media screen and (min-width: 1150px) {
