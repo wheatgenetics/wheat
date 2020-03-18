@@ -1062,7 +1062,7 @@ ul.menu li {
   }
 
   .main-navigation ul li a {
-    padding: 0 1.2em 1.4em;
+    padding: 0 0.7em 1.4em;
     margin-top: auto;
   }
 
@@ -1093,7 +1093,7 @@ ul.menu li {
   }
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1350px) {
   .main-navigation ul li a {
     padding-left: 2.3em;
     padding-right: 2.3em;
@@ -1136,7 +1136,14 @@ ul.menu li {
   color: white;
 }
 
-.social-menu ul a:last-of-type {
+@media screen and (min-width: 1350px) {
+  .social-menu ul a {
+    padding-left: 1em;
+    padding-left: 1em;
+  }
+}
+
+.social-menu ul li:last-of-type a {
   padding-right: 1em;
 }
 
