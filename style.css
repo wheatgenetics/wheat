@@ -1309,7 +1309,7 @@ ul.menu li {
 
 @media screen and (min-width: 900px) {
   .site-header #banner-text {
-    padding-top: 75px;
+    /* padding-top: 75px; */
     font-size: 100%;
   }
 
