@@ -1400,6 +1400,26 @@ article img.attachment-thumbnail {
   padding: 0;
 }
 
+@media screen and (min-width: 600px) {
+  .page-content,
+  .entry-content,
+  .entry-summary {
+    padding-right: 90px;
+  }
+
+  .home .page-content,
+  .home .entry-content,
+  .home .entry-summary {
+    padding-right: 0;
+  }
+}
+
+.home .page-content,
+.home .entry-content,
+.home .entry-summary {
+  padding-right: 0;
+}
+
 h3.entry-title {
   line-height: 1.2;
   margin: 0 0 0.6em 0;
