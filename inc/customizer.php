@@ -67,6 +67,18 @@ function wheat_customize_register( $wp_customize ) {
     'settings'   => 'wheat_main_menu_link_color',
   ) ) );
 
+  /* Main menu link color hover */
+  $wp_customize->add_setting( 'wheat_main_menu_link_color_hover' , array(
+    'default'     => '#80b567',
+    'transport'   => 'refresh',
+  ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_main_menu_link_color_hover', array(
+    'label'        => 'Main Menu Link Hover Color',
+    'section'    => 'wheat_colors',
+    'settings'   => 'wheat_main_menu_link_color_hover',
+  ) ) );
+
   /* Main menu link underline color */
   $wp_customize->add_setting( 'wheat_main_menu_link_underline_color' , array(
     'default'     => '#FDC345',
@@ -140,6 +152,10 @@ function wheat_customizer_css() {
 
     .main-navigation a {
       color: <?php echo get_theme_mod('wheat_main_menu_link_color', '#c1bcbc'); ?>;
+    }
+
+    body:not(.home) .main-navigation ul li a:hover {
+      color: <?php echo get_theme_mod('wheat_main_menu_link_color_hover', '#80b567'); ?>;
     }
 
     .main-navigation .menu-main-menu-container>ul>li.current-menu-item>a:before,
