@@ -166,6 +166,10 @@ function wheat_customizer_css() {
     .wp-block-button__link, a.button {
       background-color: <?php echo get_theme_mod('wheat_button_color', '#333333'); ?>;
     }
+
+    .site-footer .footer-box .fab, .site-footer .footer-box a:hover {
+      color: <?php echo get_theme_mod('wheat_main_menu_link_color_hover', '#80b567'); ?>;
+    }
   </style>
 <?php
 }
