@@ -1968,6 +1968,7 @@ object {
 
 .post-type-archive-news article,
 .post-type-archive-team article,
+.page-template-page-alumni article,
 .single-news article,
 .single-team article {
   display: flex;
