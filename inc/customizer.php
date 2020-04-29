@@ -38,7 +38,7 @@ function wheat_customize_register( $wp_customize ) {
   ) );
 
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_primary_color', array(
-    'label'        => 'Primary Color (header background, sponsors background, homepage intro box background, accents, etc.)',
+    'label'      => 'Primary Color (header background, sponsors background, homepage intro box background, accents, etc.)',
     'section'    => 'wheat_colors',
     'settings'   => 'wheat_primary_color',
   ) ) );
@@ -50,9 +50,21 @@ function wheat_customize_register( $wp_customize ) {
   ) );
 
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_secondary_color', array(
-    'label'        => 'Secondary Color (footer background, secondary button background, etc.)',
+    'label'      => 'Secondary Color (footer background, secondary button background, etc.)',
     'section'    => 'wheat_colors',
     'settings'   => 'wheat_secondary_color',
+  ) ) );
+
+  /* Link color */
+  $wp_customize->add_setting( 'link_color' , array(
+    'default'     => 'royalblue',
+    'transport'   => 'refresh',
+  ) );
+
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+    'label'      => 'Link Color',
+    'section'    => 'wheat_colors',
+    'settings'   => 'link_color',
   ) ) );
 
   /* Main menu link color */
@@ -62,19 +74,19 @@ function wheat_customize_register( $wp_customize ) {
   ) );
 
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_main_menu_link_color', array(
-    'label'        => 'Main Menu Link Color',
+    'label'      => 'Main Menu Link Color',
     'section'    => 'wheat_colors',
     'settings'   => 'wheat_main_menu_link_color',
   ) ) );
 
-  /* Main menu link color hover */
+  /* Main menu link hover color */
   $wp_customize->add_setting( 'wheat_main_menu_link_color_hover' , array(
     'default'     => '#80b567',
     'transport'   => 'refresh',
   ) );
 
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_main_menu_link_color_hover', array(
-    'label'        => 'Main Menu Link Hover Color',
+    'label'      => 'Main Menu Link Hover Color',
     'section'    => 'wheat_colors',
     'settings'   => 'wheat_main_menu_link_color_hover',
   ) ) );
@@ -86,7 +98,7 @@ function wheat_customize_register( $wp_customize ) {
   ) );
 
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_main_menu_link_underline_color', array(
-    'label'        => 'Main Menu Link Underline Color',
+    'label'      => 'Main Menu Link Underline Color',
     'section'    => 'wheat_colors',
     'settings'   => 'wheat_main_menu_link_underline_color',
   ) ) );
@@ -98,7 +110,7 @@ function wheat_customize_register( $wp_customize ) {
   ) );
 
   $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'wheat_button_color', array(
-    'label'        => 'Button Color',
+    'label'      => 'Button Color',
     'section'    => 'wheat_colors',
     'settings'   => 'wheat_button_color',
   ) ) );
@@ -108,6 +120,10 @@ add_action( 'customize_register', 'wheat_customize_register' );
 function wheat_customizer_css() {
 ?>
   <style type="text/css">
+    a {
+      color: <?php echo get_theme_mod('link_color', 'royalblue'); ?>;
+    }
+
     #sponsors,
     #home-page-intro-box,
     #research-areas .research-box,
