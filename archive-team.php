@@ -10,19 +10,16 @@
 get_header();
 ?>
 
-	<div class="container">
-		<?php get_sidebar(); ?>
-		
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main">
-			<h3 id="page-title">
-				<?php post_type_archive_title(); ?>
-      </h3>
+  <div class="container">
+    <?php get_sidebar(); ?>
+    
+    <div id="primary" class="content-area">
+      <main id="main" class="site-main">
+        <h3 id="page-title">
+          <?php post_type_archive_title(); ?>
+        </h3>
       
-
-
-
-      <?php
+        <?php
         $custom_terms = get_terms('position_category');
 
         foreach($custom_terms as $custom_term) {
@@ -94,22 +91,15 @@ get_header();
                 <?php wheat_entry_footer(); ?>
               </footer><!-- .entry-footer -->
             </article><!-- #post-<?php the_ID(); ?> -->
-<?php
-            }
-            echo '</section>';
+          <?php
           }
+          echo '</section>';
         }
-        ?> 
-
-
-
-
-
-
-
-			</main><!-- #main -->
-		</div><!-- #primary -->
-	</div>
+      }
+      ?> 
+      </main><!-- #main -->
+    </div><!-- #primary -->
+  </div><!-- .container -->
 
 <?php
 get_footer();
