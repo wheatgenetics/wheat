@@ -23,6 +23,9 @@ get_header();
         $custom_terms = get_terms('position_category');
 
         foreach($custom_terms as $custom_term) {
+          if ($custom_term->slug == 'alumni') {
+            continue;
+          }
           wp_reset_query();
 
           $args = array('post_type' => 'team',
