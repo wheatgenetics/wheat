@@ -1495,13 +1495,13 @@ h4.entry-title {
   line-height: 1.4em;
 }
 
-.site-footer .footer-box a:hover {
+/* .site-footer .footer-box a:hover {
   color: #FDC345;
-}
+} */
 
-.site-footer .footer-box .fab {
+/* .site-footer .footer-box .fab {
   color: #FDC345;
-}
+} */
 
 .site-footer .footer-box .fab.fa-twitter {
   margin-right: 7px;
