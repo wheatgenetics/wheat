@@ -2007,17 +2007,30 @@ object {
 }
 
 /* Recent Post Slider */
-.wppsac-slick-carousel-wrp .post-carousel {
-  position: relative;
-  max-height: 390px;
+.wppsac-slick-carousel-wrp .post-carousel .wppsac-post-image-bg {
+  /* position: relative; */
+  /* max-height: 350px; */
 }
 
-.recent-post-carousel .post-image-bg a {
+.wppsac-post-carousel.design-1 .wppsac-carousel-slides {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
+  /* height: 390px; */
 }
 
-.recent-post-carousel .post-image-bg a:after {
+.slick-slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.wppsac-post-carousel .wppsac-post-image-bg {
+  position: relative;
+  /* display: inline-block; */
+  height: 390px;
+}
+
+.wppsac-post-carousel .wppsac-post-image-bg a:after {
   content: '';
   position: absolute;
   left: 0;
@@ -2027,9 +2040,10 @@ object {
   display: inline-block;
   background: linear-gradient(transparent, #020202), no-repeat center top;
   background-size: cover;
+  /* max-height: 350px; */
 }
 
-.wp-sub-content {
+.wppsac-sub-content {
   display: none
 }
 
@@ -2038,20 +2052,22 @@ object {
   z-index:-10;
 } */
 
-.wppsac-slick-carousel-wrp .post-content-position {
+.wppsac-slick-carousel-wrp .wppsac-post-content-position {
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   width: 100%;
   padding: 0 40px;
   text-align: center;
+  bottom: 25px;
+  /* padding: 24% 30px 20px; */
 }
 
-.wppsac-slick-carousel-wrp .post-content-position .wp-post-title {
+.wppsac-slick-carousel-wrp .wppsac-post-content-position .wppsac-post-title {
   padding-bottom: 20px;
   position: relative;
 }
 
-.wppsac-slick-carousel-wrp .post-content-position .wp-post-title:before {
+.wppsac-slick-carousel-wrp .wppsac-post-content-position .wppsac-post-title:before {
   content: "";
   position: absolute;
   width: 10%;
@@ -2061,7 +2077,7 @@ object {
   border-bottom: 4px dotted #ffffff;
 }
 
-.wppsac-slick-carousel-wrp .post-content-position .wp-post-title a {
+.wppsac-post-carousel.design-1 .wppsac-post-title a {
   text-transform: uppercase;
   color: #ffffff;
   font-family: raleway, sans-serif;
@@ -2070,7 +2086,7 @@ object {
   font-weight: 400;
 }
 
-.recent-post-carousel.design-1 a.readmorebtn {
+.wppsac-post-carousel.design-1 a.wppsac-readmorebtn, .wppsac-post-carousel.design-1 a.wppsac-readmorebtn:hover {
   color: #fff;
   border: none;
   box-shadow: none;
@@ -2084,19 +2100,21 @@ object {
   padding: .9em 2.3em;
   letter-spacing: .12em;
   text-transform: uppercase;
+  background-color: #592c82;
 }
 
-.recent-post-carousel.design-1 .slick-arrow {
+.wppsac-post-carousel.design-1 .slick-arrow {
   border-radius: 50px !important;
   width: 45px;
+  background-color: #592c82 !important;
 }
 
 @media screen and (min-width: 1150px) {
-  .recent-post-carousel.design-1 .slick-prev {
+  .wppsac-post-carousel.design-1 .slick-prev {
     left: -65px !important;
   }
 
-  .recent-post-carousel.design-1 .slick-next {
+  .wppsac-post-carousel.design-1 .slick-next {
     right: -65px !important;
   }
 }
