@@ -129,8 +129,14 @@ function wheat_customizer_css() {
     #research-areas .research-box,
     .site-header .social-menu,
     .purple-background,
-    .wp-caption .wp-caption-text {
+    .wp-caption .wp-caption-text,
+    .wppsac-post-carousel.design-1 a.wppsac-readmorebtn,
+    .wppsac-post-carousel.design-1 a.wppsac-readmorebtn:hover {
       background-color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?>;
+    }
+
+    .wppsac-post-carousel.design-1 .slick-arrow, .wppsac-post-carousel.design-1 .slick-arrow:hover {
+      background-color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?> !important;
     }
 
     .recent-post-carousel.design-1 a.readmorebtn,

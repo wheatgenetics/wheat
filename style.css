@@ -2100,13 +2100,13 @@ object {
   padding: .9em 2.3em;
   letter-spacing: .12em;
   text-transform: uppercase;
-  background-color: #592c82;
+  /* background-color: #592c82; */
 }
 
 .wppsac-post-carousel.design-1 .slick-arrow {
   border-radius: 50px !important;
   width: 45px;
-  background-color: #592c82 !important;
+  /* background-color: #592c82 !important; */
 }
 
 @media screen and (min-width: 1150px) {
