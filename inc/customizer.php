@@ -149,7 +149,7 @@ function wheat_customizer_css() {
     }
 
     @media screen and (min-width: 900px) {
-      .site-header .main-navigation {
+      body:not(.home) .main-menu-wrapper {
         background-color: <?php echo get_theme_mod('wheat_primary_color', '#472979'); ?>;
       }
     }

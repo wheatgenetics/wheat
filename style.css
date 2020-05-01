@@ -942,6 +942,11 @@ footer a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.main-menu-wrapper {
+  display: flex;
+  flex: 6;
+}
+
 .main-navigation {
   display: block;
   font-family: "Raleway", sans-serif;
@@ -1333,13 +1338,12 @@ ul.menu li {
 
   .site-header .site-branding {
     flex: 1;
-    min-width: 170px;
+    /* min-width: 170px; */
   }
 
   .site-header .main-navigation {
     display: flex;
     flex: 5;
-    display: flex;
     justify-content: center;
     height: 90px;
   }
@@ -1575,6 +1579,7 @@ footer ul {
   font-size: 1.2em;
   text-transform: uppercase;
   margin-top: 1.6em;
+  hyphens: auto;
 }
 
 .widget select {
