@@ -159,6 +159,7 @@ function wheat_customizer_css() {
     h3.entry-title a,
     h4.entry-title,
     #page-title,
+    .team-title,
     .widget h2.widget-title,
     blockquote,
     blockquote p,

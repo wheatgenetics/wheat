@@ -1434,6 +1434,11 @@ h3.entry-title a {
   font-size: 0.9em;
 }
 
+h3.team-title {
+  margin-bottom: .4em;
+  text-transform: uppercase;
+}
+
 h4.entry-title {
   font-weight: 600;
 }
@@ -1988,7 +1993,6 @@ object {
 }
 
 @media screen and (min-width: 600px) {
-
   #people article,
   #news article {
     display: grid;
@@ -2009,6 +2013,28 @@ object {
 #people p,
 #news p {
   margin: 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 3em 1em;
+  padding-bottom: 60px;
+}
+
+.team-grid a {
+  color: #2D2C2C;
+}
+
+.team-grid img {
+  height: 380px;
+  width: 380px;
+  object-fit: cover;
+}
+
+.team-grid h4 {
+  margin-bottom: 0;
 }
 
 /* Recent Post Slider */

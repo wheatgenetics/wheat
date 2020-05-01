@@ -16,7 +16,6 @@ get_header();
     <div id="primary" class="content-area">
       <main id="main" class="site-main">
         
-      
         <?php
         $custom_terms = get_terms('position_category');
 
@@ -39,64 +38,27 @@ get_header();
           $loop = new WP_Query($args);
 
           if ($loop->have_posts()) {
-            // echo '<section style="padding-bottom:20px;">';
-            // echo '<span style="text-transform:uppercase;margin:15px 0 0;display:inline-block;">' . $custom_term->name . '</span>';
-
-            echo '<h3 id="page-title">' . $custom_term->name . '</h3>';
-
-
+            echo '<h3 class="team-title">' . $custom_term->name . '</h3>';
+            echo '<div class="team-grid">';
             while ($loop->have_posts()) {
               $loop->the_post();
 
-              $bio = get_field('bio');
-              $email = get_field('email');
-              $office_location = get_field('office_location');
-              $phone = get_field('phone');
+              $title_position = get_field('titleposition');
               ?>
-              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <?php the_post_thumbnail('thumbnail'); ?>
+              <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" id="post-<?php the_ID(); ?>">
+                <?php
+                the_post_thumbnail('full');
+                the_title( '<h4>', '</h4>' );
 
-                <div class="header-content-wrapper">
-                  <header class="entry-header">
-                    <?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
-                  </header><!-- .entry-header -->
-
-                  <div class="entry-content">
-                    <?php
-                    the_excerpt();
-
-                    if (!empty($bio)) {
-                      echo $bio;
-                    }
-
-                    if (!empty($office_location)) {
-                      echo '<p>' . $office_location . '</p>';
-                    }
-
-                    if (!empty($email)) {
-                      echo '<a href="mailto:' . $email . '" target="_blank">' . $email . '</a><br>';
-                    }
-
-                    if (!empty($phone)) {
-                      echo '<a href="tel:' . $phone . '" target="_blank">' . $phone . '</a>';
-                    }
-
-                    wp_link_pages( array(
-                      'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wheat' ),
-                      'after'  => '</div>',
-                    ) );
-                    ?>
-                    
-                  </div><!-- .entry-content -->
-                </div>
-                
-                <footer class="entry-footer">
-                  <?php wheat_entry_footer(); ?>
-                </footer><!-- .entry-footer -->
-              </article><!-- #post-<?php the_ID(); ?> -->
+                if (!empty($title_position)) {
+                  echo $title_position;
+                }
+                ?>
+              </a><!-- #post-<?php the_ID(); ?> -->
             <?php
             }
-          echo '</section>';
+          echo '</div> <!-- .team-grid -->';
+          echo '<hr class="wp-block-separator">';
         }
       }
       ?> 
