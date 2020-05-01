@@ -15,9 +15,7 @@ get_header();
     
     <div id="primary" class="content-area">
       <main id="main" class="site-main">
-        <h3 id="page-title">
-          <?php post_type_archive_title(); ?>
-        </h3>
+        
       
         <?php
         $custom_terms = get_terms('position_category');
@@ -41,8 +39,11 @@ get_header();
           $loop = new WP_Query($args);
 
           if ($loop->have_posts()) {
-            echo '<section style="padding-bottom:20px;">';
-            echo '<span style="text-transform:uppercase;margin:15px 0 0;display:inline-block;">' . $custom_term->name . '</span>';
+            // echo '<section style="padding-bottom:20px;">';
+            // echo '<span style="text-transform:uppercase;margin:15px 0 0;display:inline-block;">' . $custom_term->name . '</span>';
+
+            echo '<h3 id="page-title">' . $custom_term->name . '</h3>';
+
 
             while ($loop->have_posts()) {
               $loop->the_post();
