@@ -1796,6 +1796,7 @@ object {
   margin-top: -51px;
   position: relative;
   z-index: -1;
+  margin-bottom: -13%;
 }
 
 @media screen and (min-width: 600px) {
@@ -1843,7 +1844,7 @@ object {
 
 .home #news {
   position: relative;
-  margin-top: -13%;
+  /* margin-top: -13%; */
   background-position: center top;
   background-size: 100%;
   background-repeat: no-repeat;
